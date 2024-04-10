@@ -1,6 +1,6 @@
 # 300+ ReactJS Interview Questions along with clear explanation
 
-> Click ⭐ if you like the project. Pull Request are highly appreciated. Follow me @sisi_tarak[https://www.linkedin.com/in/sisitarak] for more.
+> Click ⭐ if you like the project. Pull Request are highly appreciated. Follow me [@sisi_tarak](https://www.linkedin.com/in/sisitarak) for more.
 
 Contribution are highly recommended and appreciated.
 
