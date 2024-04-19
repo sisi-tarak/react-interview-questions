@@ -15,60 +15,23 @@
 Hide/Show table of contents
 </summary>
 
-| No.| Questions                                                                                                                                                                                                                        |
-| ---| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|    | **Core React**                                                                                                                                                                                                                   |
-| 1  | [What is React?](#what-is-react)                                                                                                                                                                                                 |
-| 2  | [What is the history behind React evolution?](#What-is-the-history-behind-react-evolution)                                                                                                                                       |
-| 3  | [What are the major features of React?](#what-are-the-major-features-of-react)                                                                                                                                                   |
-| 4  | [What is JSX?](#what-is-jsx)                                                                                                                                                                                                     |
-| 5  | [What is the difference between Element and Component?](#what-is-the-difference-between-element-and-component)                                                                                                                   |
-| 6  | [How to create components in React?](#how-to-create-components-in-react)                                                                                                                                                         |
-| 7  | [When to use a Class Component over a Function Component?](#when-to-use-a-class-component-over-a-function-component)                                                                                                             |
-| 8  | [What are Pure Components?](#what-are-pure-components)                                                                                                                                                                           |
-| 9  | [What is state in React?](#what-is-state-in-react)                                                                                                                                                                               |
-| 10 | [What are props in React?](#what-are-props-in-react)                                                                                                                                                                             |
-| 11 | [What is the difference between state and props?](#what-is-the-difference-between-state-and-props)                                                                                                                               |
-| 12 | [What is the difference between HTML and React event handling?](#what-is-the-difference-between-html-and-react-event-handling)                                                                                                   |
-| 13 | [What are synthetic events in React?](#what-are-synthetic-events-in-react)                                                                                                                                                       |
-| 14 | [What are inline conditional expressions?](#what-are-inline-conditional-expressions)                                                                                                                                             |
-| 15 | [What is "key" prop and what is the benefit of using it in arrays of elements?](#what-is-key-prop-and-what-is-the-benefit-of-using-it-in-arrays-of-elements)                                                                     |
-| 16 | [What is Virtual DOM?](#what-is-virtual-dom)                                                                                                                                                                                     |
-| 17 | [How Virtual DOM works?](#how-virtual-dom-works)                                                                                                                                                                                 |
-| 18 | [What is the difference between Shadow DOM and Virtual DOM?](#what-is-the-difference-between-shadow-dom-and-virtual-dom)                                                                                                         |
-| 19 | [What is React Fiber?](#what-is-react-fiber)                                                                                                                                                                                     |
-| 20 | [What is the main goal of React Fiber?](#what-is-the-main-goal-of-react-fiber)                                                                                                                                                   |
-| 21 | [What are controlled components?](#what-are-controlled-components)                                                                                                                                                               |
-| 22 | [What are uncontrolled components?](#what-are-uncontrolled-components)                                                                                                                                                           |
-| 23 | [What is the difference between createElement and cloneElement?](#what-is-the-difference-between-createelement-and-cloneelement)                                                                                                 |
-| 24 | [What is Lifting State Up in React?](#what-is-lifting-state-up-in-react)                                                                                                                                                         |
-| 25 | [What are Higher-Order components?](#what-are-higher-order-components)                                                                                                                                                           |
-| 26 | [What is children prop?](#what-is-children-prop)                                                                                                                                                                                 |
-| 27 | [How to write comments in React?](#how-to-write-comments-in-react)                                                                                                                                                               |
-| 28 | [What is reconciliation?](#what-is-reconciliation)                                                                                                                                                                               |
-| 29 | [Does the lazy function support named exports?](#does-the-lazy-function-support-named-exports)                                                                                                                                   |
-| 30 | [Why React uses className over class attribute?](#why-react-uses-classname-over-class-attribute)                                                                                                                                 |
-| 31 | [What are fragments?](#what-are-fragments)                                                                                                                                                                                       |
-| 32 | [Why fragments are better than container divs?](#why-fragments-are-better-than-container-divs)                                                                                                                                   |
-| 33 | [What are portals in React?](#what-are-portals-in-react)                                                                                                                                                                         |
-| 34 | [What are stateless components?](#what-are-stateless-components)                                                                                                                                                                 |
-| 35 | [What are stateful components?](#what-are-stateful-components)                                                                                                                                                                   |
-| 36 | [How to apply validation on props in React?](#how-to-apply-validation-on-props-in-react)                                                                                                                                         |
-| 37 | [What are the advantages of React?](#what-are-the-advantages-of-react)                                                                                                                                                           |
-| 38 | [What are the limitations of React?](#what-are-the-limitations-of-react)                                                                                                                                                         |
-| 39 | [What are the recommended ways for static type checking?](#what-are-the-recommended-ways-for-static-type-checking)                                                                                                               |
-| 40 | [What is the use of react-dom package?](#what-is-the-use-of-react-dom-package)                                                                                                                                                   |
-| 41 | [What is ReactDOMServer?](#what-is-reactdomserver)                                                                                                                                                                               |
-| 42 | [How to use InnerHtml in React?](#how-to-use-innerhtml-in-react)                                                                                                                                                                 |
-| 43 | [How to use styles in React?](#how-to-use-styles-in-react)                                                                                                                                                                       |
-| 44 | [How events are different in React?](#how-events-are-different-in-react)                                                                                                                                                         |
-| 45 | [What is the impact of indexes as keys?](#what-is-the-impact-of-indexes-as-keys)                                                                                                                                                 |
-| 46 | [How do you conditionally render components?](#how-do-you-conditionally-render-components)                                                                                                                                       |
-| 47 | [Why we need to be careful when spreading props on DOM elements??](#why-we-need-to-be-careful-when-spreading-props-on-dom-elements)                                                                                              |
-| 48 | [How do you memoize a component?](#how-do-you-memoize-a-component)                                                                                                                                                               |
-| 49 | [How you implement Server-Side Rendering or SSR?](#how-you-implement-server-side-rendering-or-ssr)                                                                                                                               |
-| 50 | [How to enable production mode in React?](#how-to-enable-production-mode-in-react)                                                                                                                                               |
-                                                                                                                                
+| No. | Questions                                                                                                                                                                                                                        |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|     | **Core React**                                                                                                                                                                                                                   |
+| 1   | [What is React?](#what-is-react)                                                                                                                                                                                                 |
+| 2   | [What is the history behind React evolution?](#What-is-the-history-behind-react-evolution)                                                                                                                                       |
+| 3   | [What are the major features of React?](#what-are-the-major-features-of-react)                                                                                                                                                   |
+| 4   | [What is JSX in React?](#what-is-jsx-in-react)                                                                                                                                                                                   |
+| 5   | [What are state and props in React?](#what-are-state-and-props-in-react)                                                                                                                                                         |
+| 6   | [What is the significance of keys in React lists?](#what-is-the-significance-of-keys-in-react-lists)                                                                                                                             |
+| 7   | [Explain the component lifecycle methods in React?](#explain-the-component-lifecycle-methods-in-react)                                                                                                                           |
+| 8   | [What is the significance of setState() in React?](#what-is-the-significance-of-setState-in-react)                                                                                                                               |
+| 9   | [Explain the concept of higher-order components (HOC) in React?](#explain-the-concept-of-higher-order-components-hoc-in-react)                                                                                                   |
+| 10  | [What are controlled components in React?](#what-are-controlled-components-in-react)                                                                                                                                             |
+| 11  | [Explain the difference between functional components and class components in React?](#explain-the-difference-between-functional-components-and-class-components-in-react)                                                       |
+| 12  | [What are React hooks?](#what-are-react-hooks)                                                                                                                                                                                   |
+| 13  | [What are React Fragments?](#what-are-react-fragments)                                                                                                                                                                           |
+                                 
 </details>
 
 
@@ -78,9 +41,213 @@ Hide/Show table of contents
 
 1.  ### What is React?
 
-   
+    React (aka React.js or ReactJS) is an **open-source front-end JavaScript library** that is used for building composable user interfaces, especially for single-page applications. It is used for handling view layer for web and mobile apps based on components in a declarative approach. 
+    
+    React was created by [Jordan Walke](https://github.com/jordwalke), a software engineer working for Facebook. React was first deployed on Facebook's News Feed in 2011 and on Instagram in 2012.
 
-    **[⬆ Back to Top](#table-of-contents)**
+     **[⬆ Back to Top](#table-of-contents)**
+    
+
+2. ### What is the history behind React evolution?
+    The history of ReactJS started in 2010 with the creation of **XHP**. XHP is a PHP extension which improved the syntax of the language such that XML document fragments become valid PHP expressions and the primary purpose was used to create custom and reusable HTML elements. 
+    
+    The main principle of this extension was to make front-end code easier to understand and to help avoid cross-site scripting attacks. The project was successful to prevent the malicious content submitted by the scrubbing user.
+
+    But there was a different problem with XHP in which dynamic web applications require many roundtrips to the server, and XHP did not solve this problem. Also, the whole UI was re-rendered for small change in the application. Later, the initial prototype of React is created with the name **FaxJ** by Jordan inspired from XHP. Finally after sometime React has been introduced as a new library into JavaScript world.
+
+    **Note:** JSX comes from the idea of XHP
+
+     **[⬆ Back to Top](#table-of-contents)**
+   
+    
+3.  ### What are the major features of React?
+
+    The major features of React are:
+
+    - Uses **JSX** syntax, a syntax extension of JS that allows developers to write HTML in their JS code.
+    - It uses **Virtual DOM** instead of Real DOM considering that Real DOM manipulations are expensive.
+    - Supports **server-side rendering** which is useful for Search Engine Optimizations(SEO).
+    - Follows **Unidirectional or one-way** data flow or data binding.
+    - Uses **reusable/composable** UI components to develop the view.
+
+     **[⬆ Back to Top](#table-of-contents)**
+
+    
+4. ### What is JSX in React?
+   
+     JSX (JavaScript XML) is a syntax extension for JavaScript used in React to describe the structure of UI components. It allows developers to write HTML-like code directly in JavaScript. JSX is compiled into regular JavaScript functions by tools like Babel before being executed by the browser.
+
+   ```jsx harmony
+     import React from 'react';
+     import ReactDOM from 'react-dom';
+     
+     const App = () => {
+         return (
+             <div>
+                 <h1>Hello, World!</h1>
+                 <p>This is a JSX example.</p>
+             </div>
+         );
+     };
+     
+     ReactDOM.render(<App />, document.getElementById('root'));
+   ```
+   
+     **[⬆ Back to Top](#table-of-contents)**
+
+
+5. ### What are state and props in React?
+   
+     State is an internal data storage mechanism in React components, managed by React itself. Props (short for properties) are read-only data passed from parent to child components. The main difference is that state is mutable and controlled by the component itself, whereas props are immutable and controlled by the parent component.
+
+     **[⬆ Back to Top](#table-of-contents)**
+
+
+6. ### What is the significance of keys in React lists?
+
+   Keys are special string attributes used by React to identify which items have changed, been added, or been removed in a list of elements. Keys help React efficiently update the UI by minimizing re-renders. Keys should be unique among siblings, but don't need to be globally unique.
+
+   ```jsx harmony
+     const ListComponent = () => {
+         const items = ['apple', 'banana', 'cherry'];
+     
+         return (
+             <ul>
+                 {items.map((item, index) => (
+                     <li key={index}>{item}</li>
+                 ))}
+             </ul>
+         );
+     };
+   ```
+
+     **[⬆ Back to Top](#table-of-contents)**
+
+          
+7. Explain the component lifecycle methods in React?
+   
+     React components have several lifecycle methods that execute at different stages of a component's existence. These methods include componentDidMount, componentDidUpdate, componentWillUnmount, etc. They allow developers to hook into different points in a component's lifecycle to perform tasks like fetching data, updating the DOM, or cleaning up resources.
+
+     **[⬆ Back to Top](#table-of-contents)**
+
+   
+8. What is the significance of setState() in React?
+   
+     setState() is a method used to update the state of a React component. When setState() is called, React re-renders the component and its children. It can take an object as an argument to update state properties asynchronously, or a callback function to perform actions after the state has been updated.
+
+     ```jsx harmony
+          import React, { Component } from 'react';
+          
+          class Counter extends Component {
+              constructor(props) {
+                  super(props);
+                  this.state = {
+                      count: 0
+                  };
+              }
+          
+              incrementCount = () => {
+                  this.setState({ count: this.state.count + 1 });
+              };
+          
+              render() {
+                  return (
+                      <div>
+                          <p>Count: {this.state.count}</p>
+                          <button onClick={this.incrementCount}>Increment</button>
+                      </div>
+                  );
+              }
+          }
+          
+          export default Counter;
+     ```
+
+     **[⬆ Back to Top](#table-of-contents)**
+
+   
+9. Explain the concept of higher-order components (HOC) in React?
+    
+     Higher-order components are functions that take a component and return a new component with enhanced functionality. They are a common pattern for code reuse, logic sharing, and cross-cutting concerns like authentication, logging, etc. HOCs allow you to abstract away common logic into reusable functions.
+
+     **[⬆ Back to Top](#table-of-contents)**
+
+   
+10. What are controlled components in React?
+    
+     Controlled components are components whose form elements (like inputs, selects, and textareas) are controlled by React state. This means that the component renders a form element whose value is controlled by React, and React handles the value changes through state and event handlers.Example:
+
+    ```jsx harmony
+     import React, { Component } from 'react';
+     
+     class ControlledComponent extends Component {
+         constructor(props) {
+             super(props);
+             this.state = {
+                 value: ''
+             };
+         }
+     
+         handleChange = (event) => {
+             this.setState({ value: event.target.value });
+         };
+     
+         render() {
+             return (
+                 <input
+                     type="text"
+                     value={this.state.value}
+                     onChange={this.handleChange}
+                 />
+             );
+         }
+     }
+     
+     export default ControlledComponent;
+    ```
+
+     **[⬆ Back to Top](#table-of-contents)**
+
+    
+11. Explain the difference between functional components and class components in React?
+
+    Functional components are JavaScript functions that accept props and return React elements. They are simpler and more lightweight than class components, and they can use React hooks to manage state and lifecycle.    
+    Class components are ES6 classes that extend React.Component and have their own state and lifecycle methods.
+
+     **[⬆ Back to Top](#table-of-contents)**
+
+    
+12. What are React hooks?
+
+     React hooks are functions that allow functional components to use state, lifecycle, and other React features without writing a class. Examples of hooks include useState, useEffect, useContext, etc. Custom hooks are functions that use hooks internally and allow you to reuse stateful logic between different components.
+
+     ```jsx harmony
+          import { useState } from 'react';
+          
+          const useCounter = (initialCount) => {
+              const [count, setCount] = useState(initialCount);
+          
+              const increment = () => {
+                  setCount(count + 1);
+              };
+          
+              return { count, increment };
+          };
+          
+          export default useCounter;
+     ```
+
+     **[⬆ Back to Top](#table-of-contents)**
+
+    
+13. What are React Fragments?
+
+     React Fragments allow you to group multiple children elements without adding extra nodes to the DOM. They are useful when you need to return multiple elements from a component's render method, but don't want to add unnecessary divs or spans. Fragments improve code readability and performance by reducing the number of DOM elements.
+
+     **[⬆ Back to Top](#table-of-contents)**
+
+
+
 
 
 ---
