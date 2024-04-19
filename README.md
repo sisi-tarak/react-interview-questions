@@ -124,14 +124,14 @@ Hide/Show table of contents
      **[⬆ Back to Top](#table-of-contents)**
 
           
-7. Explain the component lifecycle methods in React?
+7. ### Explain the component lifecycle methods in React?
    
      React components have several lifecycle methods that execute at different stages of a component's existence. These methods include componentDidMount, componentDidUpdate, componentWillUnmount, etc. They allow developers to hook into different points in a component's lifecycle to perform tasks like fetching data, updating the DOM, or cleaning up resources.
 
      **[⬆ Back to Top](#table-of-contents)**
 
    
-8. What is the significance of setState in React?
+8. ### What is the significance of setState in React?
    
      setState() is a method used to update the state of a React component. When setState() is called, React re-renders the component and its children. It can take an object as an argument to update state properties asynchronously, or a callback function to perform actions after the state has been updated.
 
@@ -166,14 +166,14 @@ Hide/Show table of contents
      **[⬆ Back to Top](#table-of-contents)**
 
    
-9. Explain the concept of higher-order components in React?
+9. ### Explain the concept of higher-order components in React?
     
      Higher-order components are functions that take a component and return a new component with enhanced functionality. They are a common pattern for code reuse, logic sharing, and cross-cutting concerns like authentication, logging, etc. HOCs allow you to abstract away common logic into reusable functions.
 
      **[⬆ Back to Top](#table-of-contents)**
 
    
-10. What are controlled components in React?
+10. ### What are controlled components in React?
     
      Controlled components are components whose form elements (like inputs, selects, and textareas) are controlled by React state. This means that the component renders a form element whose value is controlled by React, and React handles the value changes through state and event handlers.Example:
 
@@ -209,7 +209,7 @@ Hide/Show table of contents
      **[⬆ Back to Top](#table-of-contents)**
 
     
-11. Explain the difference between functional components and class components in React?
+11. ### Explain the difference between functional components and class components in React?
 
     Functional components are JavaScript functions that accept props and return React elements. They are simpler and more lightweight than class components, and they can use React hooks to manage state and lifecycle.    
     Class components are ES6 classes that extend React.Component and have their own state and lifecycle methods.
@@ -217,7 +217,7 @@ Hide/Show table of contents
      **[⬆ Back to Top](#table-of-contents)**
 
     
-12. What are React hooks?
+12. ### What are React hooks?
 
      React hooks are functions that allow functional components to use state, lifecycle, and other React features without writing a class. Examples of hooks include useState, useEffect, useContext, etc. Custom hooks are functions that use hooks internally and allow you to reuse stateful logic between different components.
 
@@ -240,7 +240,7 @@ Hide/Show table of contents
      **[⬆ Back to Top](#table-of-contents)**
 
     
-13. What are React Fragments?
+13. ### What are React Fragments?
 
      React Fragments allow you to group multiple children elements without adding extra nodes to the DOM. They are useful when you need to return multiple elements from a component's render method, but don't want to add unnecessary divs or spans. Fragments improve code readability and performance by reducing the number of DOM elements.
 
