@@ -25,8 +25,8 @@ Hide/Show table of contents
 | 5   | [What are state and props in React?](#what-are-state-and-props-in-react)                                                                                                                                                         |
 | 6   | [What is the significance of keys in React lists?](#what-is-the-significance-of-keys-in-react-lists)                                                                                                                             |
 | 7   | [Explain the component lifecycle methods in React?](#explain-the-component-lifecycle-methods-in-react)                                                                                                                           |
-| 8   | [What is the significance of setState() in React?](#what-is-the-significance-of-setState-in-react)                                                                                                                               |
-| 9   | [Explain the concept of higher-order components (HOC) in React?](#explain-the-concept-of-higher-order-components-hoc-in-react)                                                                                                   |
+| 8   | [What is the significance of setState in React?](#what-is-the-significance-of-setState-in-react)                                                                                                                               |
+| 9   | [Explain the concept of higher-order components in React?](#explain-the-concept-of-higher-order-components-in-react)                                                                                                             |
 | 10  | [What are controlled components in React?](#what-are-controlled-components-in-react)                                                                                                                                             |
 | 11  | [Explain the difference between functional components and class components in React?](#explain-the-difference-between-functional-components-and-class-components-in-react)                                                       |
 | 12  | [What are React hooks?](#what-are-react-hooks)                                                                                                                                                                                   |
@@ -131,7 +131,7 @@ Hide/Show table of contents
      **[⬆ Back to Top](#table-of-contents)**
 
    
-8. What is the significance of setState() in React?
+8. What is the significance of setState in React?
    
      setState() is a method used to update the state of a React component. When setState() is called, React re-renders the component and its children. It can take an object as an argument to update state properties asynchronously, or a callback function to perform actions after the state has been updated.
 
@@ -166,7 +166,7 @@ Hide/Show table of contents
      **[⬆ Back to Top](#table-of-contents)**
 
    
-9. Explain the concept of higher-order components (HOC) in React?
+9. Explain the concept of higher-order components in React?
     
      Higher-order components are functions that take a component and return a new component with enhanced functionality. They are a common pattern for code reuse, logic sharing, and cross-cutting concerns like authentication, logging, etc. HOCs allow you to abstract away common logic into reusable functions.
 
