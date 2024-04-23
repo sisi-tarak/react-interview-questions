@@ -53,7 +53,8 @@ Hide/Show table of contents
     React was created by [Jordan Walke](https://github.com/jordwalke), a software engineer working for Facebook. React was first deployed on Facebook's News Feed in 2011 and on Instagram in 2012.
 
      **[⬆ Back to Top](#table-of-contents)**
-    
+    <br><br>
+
 
 2. ### What is the history behind React evolution?
     The history of ReactJS started in 2010 with the creation of **XHP**. XHP is a PHP extension which improved the syntax of the language such that XML document fragments become valid PHP expressions and the primary purpose was used to create custom and reusable HTML elements. 
@@ -65,6 +66,7 @@ Hide/Show table of contents
     **Note:** JSX comes from the idea of XHP
 
      **[⬆ Back to Top](#table-of-contents)**
+    <br><br>
    
     
 3.  ### What are the major features of React?
@@ -78,7 +80,8 @@ Hide/Show table of contents
     - Uses **reusable/composable** UI components to develop the view.
 
      **[⬆ Back to Top](#table-of-contents)**
-
+    <br><br>
+    
     
 4. ### What is JSX in React?
    
@@ -101,14 +104,16 @@ Hide/Show table of contents
    ```
    
      **[⬆ Back to Top](#table-of-contents)**
-
+    <br><br>
+    
 
 5. ### What are state and props in React?
    
      State is an internal data storage mechanism in React components, managed by React itself. Props (short for properties) are read-only data passed from parent to child components. The main difference is that state is mutable and controlled by the component itself, whereas props are immutable and controlled by the parent component.
 
      **[⬆ Back to Top](#table-of-contents)**
-
+    <br><br>
+    
 
 6. ### What is the significance of keys in React lists?
 
@@ -129,14 +134,16 @@ Hide/Show table of contents
    ```
 
      **[⬆ Back to Top](#table-of-contents)**
-
+    <br><br>
+    
           
 7. ### Explain the component lifecycle methods in React?
    
      React components have several lifecycle methods that execute at different stages of a component's existence. These methods include componentDidMount, componentDidUpdate, componentWillUnmount, etc. They allow developers to hook into different points in a component's lifecycle to perform tasks like fetching data, updating the DOM, or cleaning up resources.
 
      **[⬆ Back to Top](#table-of-contents)**
-
+    <br><br>
+    
    
 8. ### What is the significance of setState in React?
    
@@ -171,14 +178,16 @@ Hide/Show table of contents
      ```
 
      **[⬆ Back to Top](#table-of-contents)**
-
+    <br><br>
+    
    
 9. ### Explain the concept of higher-order components in React?
     
      Higher-order components are functions that take a component and return a new component with enhanced functionality. They are a common pattern for code reuse, logic sharing, and cross-cutting concerns like authentication, logging, etc. HOCs allow you to abstract away common logic into reusable functions.
 
      **[⬆ Back to Top](#table-of-contents)**
-
+    <br><br>
+    
    
 10. ### What are controlled components in React?
     
@@ -214,15 +223,17 @@ Hide/Show table of contents
     ```
 
      **[⬆ Back to Top](#table-of-contents)**
-
+    <br><br>
+    
     
 11. ### Explain the difference between functional components and class components in React?
 
-    Functional components are JavaScript functions that accept props and return React elements. They are simpler and more lightweight than class components, and they can use React hooks to manage state and lifecycle.    
+    Functional components are JavaScript functions that accept props and return React elements. They are simpler and more lightweight than class components, and they can use React hooks to manage state and lifecycle.  <br>
     Class components are ES6 classes that extend React.Component and have their own state and lifecycle methods.
 
      **[⬆ Back to Top](#table-of-contents)**
-
+    <br><br>
+    
     
 12. ### What are React hooks?
 
@@ -245,14 +256,16 @@ Hide/Show table of contents
      ```
 
      **[⬆ Back to Top](#table-of-contents)**
-
+    <br><br>
+    
     
 13. ### What are React Fragments?
 
      React Fragments allow you to group multiple children elements without adding extra nodes to the DOM. They are useful when you need to return multiple elements from a component's render method, but don't want to add unnecessary divs or spans. Fragments improve code readability and performance by reducing the number of DOM elements.
 
      **[⬆ Back to Top](#table-of-contents)**
-
+    <br><br>
+    
 
 14. ### What are refs in React?
     
@@ -280,7 +293,8 @@ Hide/Show table of contents
      ```
 
      **[⬆ Back to Top](#table-of-contents)**
-    
+      <br><br>
+      
  
 15. ### What is context in React?
 
@@ -308,7 +322,8 @@ Hide/Show table of contents
      ```
      
      **[⬆ Back to Top](#table-of-contents)**
-    
+       <br><br>
+       
  
 16. ### Explain the concept of virtual DOM in React?
     
@@ -317,7 +332,8 @@ Hide/Show table of contents
      Imagine you have a list of items in your UI, and you update one item's text. Instead of directly manipulating the DOM to change the text, React updates the virtual DOM, compares it with the previous state, and efficiently applies the necessary changes to the actual DOM.
 
      **[⬆ Back to Top](#table-of-contents)**
-    
+        <br><br>
+        
     
 17. ### What are keys and why are they important in React lists?
     
@@ -326,7 +342,8 @@ Hide/Show table of contents
      Consider rendering a list of items dynamically using map(). Assigning a unique key to each item allows React to track which items have been added, removed, or updated efficiently.
 
      **[⬆ Back to Top](#table-of-contents)**
-
+    <br><br>
+    
     
 18. ### What are the differences between useState and useReducer hooks in React?
     
@@ -364,7 +381,8 @@ Hide/Show table of contents
      ```
 
       **[⬆ Back to Top](#table-of-contents)**
-
+    <br><br>
+    
 
 19. ### Explain the concept of lazy loading in React?
     
@@ -385,7 +403,7 @@ Hide/Show table of contents
      ```
 
       **[⬆ Back to Top](#table-of-contents)**
-
+    <br><br>
     
 20. ### What are the benefits of using PropTypes in React?
     
