@@ -17,7 +17,6 @@ Hide/Show table of contents
 
 | No. | Questions                                                                                                                                                                                                                        |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|     | **Core React**                                                                                                                                                                                                                   |
 | 1   | [What is React?](#what-is-react)                                                                                                                                                                                                 |
 | 2   | [What is the history behind React evolution?](#What-is-the-history-behind-react-evolution)                                                                                                                                       |
 | 3   | [What are the major features of React?](#what-are-the-major-features-of-react)                                                                                                                                                   |
@@ -25,12 +24,20 @@ Hide/Show table of contents
 | 5   | [What are state and props in React?](#what-are-state-and-props-in-react)                                                                                                                                                         |
 | 6   | [What is the significance of keys in React lists?](#what-is-the-significance-of-keys-in-react-lists)                                                                                                                             |
 | 7   | [Explain the component lifecycle methods in React?](#explain-the-component-lifecycle-methods-in-react)                                                                                                                           |
-| 8   | [What is the significance of setState in React?](#what-is-the-significance-of-setState-in-react)                                                                                                                               |
+| 8   | [What is the significance of setState in React?](#what-is-the-significance-of-setState-in-react)                                                                                                                                 |
 | 9   | [Explain the concept of higher-order components in React?](#explain-the-concept-of-higher-order-components-in-react)                                                                                                             |
 | 10  | [What are controlled components in React?](#what-are-controlled-components-in-react)                                                                                                                                             |
 | 11  | [Explain the difference between functional components and class components in React?](#explain-the-difference-between-functional-components-and-class-components-in-react)                                                       |
 | 12  | [What are React hooks?](#what-are-react-hooks)                                                                                                                                                                                   |
 | 13  | [What are React Fragments?](#what-are-react-fragments)                                                                                                                                                                           |
+| 14  | [What are refs in React?](#what-are-refs-in-react)                                                                                                                                                                               |
+| 15  | [What is context in React?](#what-is-context-in-react)                                                                                                                                                                           |
+| 16  | [Explain the concept of virtual DOM in React?](#explain-the-concept-of-virtual-dom-in-react)                                                                                                                                     |
+| 17  | [What are keys and why are they important in React lists?](#what-are-keys-and-why-are-they-important-in-react-lists)                                                                                                             |
+| 18  | [What are the differences between useState and useReducer hooks in React?](#what-are-the-differences-between-usestate-and-usereducer-hooks-in-react)                                                                             |
+| 19  | [Explain the concept of lazy loading in React?](#explain-the-concept-of-lazy-loading-in-react)                                                                                                                                   |
+| 20  | [What are the benefits of using PropTypes in React?](#what-are-the-benefits-of-using-proptypes-in-react)                                                                                                                         |
+| 21  | [What are React Fragments?](#what-are-react-fragments)                                                                                                                                                                           |
                                  
 </details>
 
@@ -247,7 +254,222 @@ Hide/Show table of contents
      **[⬆ Back to Top](#table-of-contents)**
 
 
+14. ### What are refs in React?
+    
+     Refs in React provide a way to access the underlying DOM nodes or React elements directly. They are primarily used for managing focus, integrating with third-party DOM libraries, or triggering imperative animations.
 
+      ```jsx harmony
+          import React, { useRef } from 'react';
+          
+          const RefExample = () => {
+              const inputRef = useRef(null);
+          
+              const focusInput = () => {
+                  inputRef.current.focus();
+              };
+          
+              return (
+                  <div>
+                      <input ref={inputRef} type="text" />
+                      <button onClick={focusInput}>Focus Input</button>
+                  </div>
+              );
+          };
+          
+          export default RefExample;
+     ```
+
+     **[⬆ Back to Top](#table-of-contents)**
+    
+ 
+15. ### What is context in React?
+
+     Context in React provides a way to pass data through the component tree without having to pass props manually at every level. It's primarily used when some data needs to be accessible by many components at different nesting levels.
+
+     ```jsx harmony
+          import React, { createContext, useContext } from 'react';
+          
+          const ThemeContext = createContext('light');
+          
+          const ThemedComponent = () => {
+              const theme = useContext(ThemeContext);
+              return <p>Current Theme: {theme}</p>;
+          };
+          
+          const ContextExample = () => {
+              return (
+                  <ThemeContext.Provider value="dark">
+                      <ThemedComponent />
+                  </ThemeContext.Provider>
+              );
+          };
+          
+          export default ContextExample;
+     ```
+     
+     **[⬆ Back to Top](#table-of-contents)**
+    
+ 
+16. ### Explain the concept of virtual DOM in React?
+    
+     The virtual DOM in React is a lightweight copy of the actual DOM maintained by React. When state or props change, React compares the virtual DOM with the previous version and computes the minimum number of DOM operations needed to update the actual DOM. This process makes React applications more efficient by minimizing DOM manipulation. <br> <br>
+    `Another Example:` <br>
+     Imagine you have a list of items in your UI, and you update one item's text. Instead of directly manipulating the DOM to change the text, React updates the virtual DOM, compares it with the previous state, and efficiently applies the necessary changes to the actual DOM.
+
+     **[⬆ Back to Top](#table-of-contents)**
+    
+    
+17. ### What are keys and why are they important in React lists?
+    
+     Keys are special attributes used by React to identify which items have changed, been added, or been removed in a list of elements. They help React efficiently update the UI by minimizing re-renders and ensuring that elements are re-used properly. Keys should be unique among siblings, but don't need to be globally unique. <br> <br>
+    `Another Example:` <br>
+     Consider rendering a list of items dynamically using map(). Assigning a unique key to each item allows React to track which items have been added, removed, or updated efficiently.
+
+     **[⬆ Back to Top](#table-of-contents)**
+
+    
+18. ### What are the differences between useState and useReducer hooks in React?
+    
+     Both useState and useReducer hooks are used to manage state in functional components. The main difference is that useState is simpler and more suitable for managing independent state variables, while useReducer is more powerful and allows for complex state logic and actions.
+
+     ```jsx harmony
+          import React, { useReducer } from 'react';
+          
+          const initialState = { count: 0 };
+          
+          const reducer = (state, action) => {
+              switch (action.type) {
+                  case 'increment':
+                      return { count: state.count + 1 };
+                  case 'decrement':
+                      return { count: state.count - 1 };
+                  default:
+                      return state;
+              }
+          };
+          
+          const ReducerExample = () => {
+              const [state, dispatch] = useReducer(reducer, initialState);
+          
+              return (
+                  <div>
+                      Count: {state.count}
+                      <button onClick={() => dispatch({ type: 'increment' })}>Increment</button>
+                      <button onClick={() => dispatch({ type: 'decrement' })}>Decrement</button>
+                  </div>
+              );
+          };
+          
+          export default ReducerExample;
+     ```
+
+      **[⬆ Back to Top](#table-of-contents)**
+
+
+19. ### Explain the concept of lazy loading in React?
+    
+     Lazy loading is a technique used to defer the loading of non-essential resources (such as components or data) until they are actually needed. In React, lazy loading can be achieved using dynamic imports and the React.lazy() function, which allows you to import components asynchronously.
+
+     ```jsx harmony
+          import React, { Suspense } from 'react';
+          
+          const LazyLoadedComponent = React.lazy(() => import('./LazyLoadedComponent'));
+          
+          const LazyLoadingExample = () => (
+              <Suspense fallback={<div>Loading...</div>}>
+                  <LazyLoadedComponent />
+              </Suspense>
+          );
+          
+          export default LazyLoadingExample;
+     ```
+
+      **[⬆ Back to Top](#table-of-contents)**
+
+    
+20. ### What are the benefits of using PropTypes in React?
+    
+     PropTypes is a runtime type checking mechanism for React props. It helps catch bugs early by providing a way to specify the type of each prop a component should receive. PropTypes also serve as documentation for components, making it easier for other developers to understand how to use them.
+
+     ```jsx harmony
+          import React from 'react';
+          import PropTypes from 'prop-types';
+          
+          const MyComponent = ({ name, age }) => (
+              <div>
+                  <p>Name: {name}</p>
+                  <p>Age: {age}</p>
+              </div>
+          );
+          
+          MyComponent.propTypes = {
+              name: PropTypes.string.isRequired,
+              age: PropTypes.number.isRequired
+          };
+          
+          export default MyComponent;
+     ```
+
+      **[⬆ Back to Top](#table-of-contents)**
+
+    
+What are React hooks? Can you name a few built-in hooks and explain their use cases?Clarification:
+React hooks are functions that enable functional components to use state and lifecycle features without writing a class. Some built-in hooks include useState for managing state, useEffect for handling side effects, useContext for accessing context, and useReducer for managing more complex state logic.Additional Example:
+jsx
+Copy code
+import React, { useState, useEffect } from 'react';
+
+const HooksExample = () => {
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        document.title = `You clicked ${count} times`;
+    }, [count]);
+
+    return (
+        <div>
+            <p>You clicked {count} times</p>
+            <button onClick={() => setCount(count + 1)}>
+                Click me
+            </button>
+        </div>
+    );
+};
+
+export default HooksExample;
+Explain the concept of conditional rendering in React. Provide an example.Clarification:
+Conditional rendering is the process of dynamically determining whether a component or element should be rendered based on certain conditions. This is typically done using JavaScript expressions or ternary operators inside JSX.Additional Example:
+jsx
+Copy code
+import React from 'react';
+
+const ConditionalComponent = ({ isLoggedIn }) => {
+    return isLoggedIn ? <p>Welcome, User!</p> : <p>Please log in.</p>;
+};
+
+export default ConditionalComponent;
+What are the advantages of using arrow functions in React event handlers?Clarification:
+Arrow functions automatically bind this to the enclosing lexical scope, which eliminates the need to manually bind this in event handlers. This makes the code cleaner and more concise, especially when dealing with complex component hierarchies or passing functions as props.Additional Example:
+jsx
+Copy code
+import React, { useState } from 'react';
+
+const ArrowFunctionExample = () => {
+    const [count, setCount] = useState(0);
+
+    const handleClick = () => {
+        setCount(count + 1);
+    };
+
+    return (
+        <div>
+            <p>Count: {count}</p>
+            <button onClick={handleClick}>Increment</button>
+        </div>
+    );
+};
+
+export default ArrowFunctionExample;
 
 
 ---
