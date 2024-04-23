@@ -331,7 +331,7 @@ Hide/Show table of contents
 16. ### Explain the concept of virtual DOM in React?
     
      The virtual DOM in React is a lightweight copy of the actual DOM maintained by React. When state or props change, React compares the virtual DOM with the previous version and computes the minimum number of DOM operations needed to update the actual DOM. This process makes React applications more efficient by minimizing DOM manipulation. <br> <br>
-    `Another Example:` <br>
+    **Another Example:** <br>
      Imagine you have a list of items in your UI, and you update one item's text. Instead of directly manipulating the DOM to change the text, React updates the virtual DOM, compares it with the previous state, and efficiently applies the necessary changes to the actual DOM.
 
      **[⬆ Back to Top](#table-of-contents)**
@@ -341,7 +341,7 @@ Hide/Show table of contents
 17. ### What are keys and why are they important in React lists?
     
      Keys are special attributes used by React to identify which items have changed, been added, or been removed in a list of elements. They help React efficiently update the UI by minimizing re-renders and ensuring that elements are re-used properly. Keys should be unique among siblings, but don't need to be globally unique. <br> <br>
-    `Another Example:` <br>
+    **Another Example:** <br>
      Consider rendering a list of items dynamically using map(). Assigning a unique key to each item allows React to track which items have been added, removed, or updated efficiently.
 
      **[⬆ Back to Top](#table-of-contents)**
