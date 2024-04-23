@@ -46,8 +46,9 @@ Hide/Show table of contents
 
 
 ---
-
-## Core React
+<br>
+## React Questions
+<br>
 
 1.  ### What is React?
 
