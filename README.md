@@ -37,7 +37,10 @@ Hide/Show table of contents
 | 18  | [What are the differences between useState and useReducer hooks in React?](#what-are-the-differences-between-usestate-and-usereducer-hooks-in-react)                                                                             |
 | 19  | [Explain the concept of lazy loading in React?](#explain-the-concept-of-lazy-loading-in-react)                                                                                                                                   |
 | 20  | [What are the benefits of using PropTypes in React?](#what-are-the-benefits-of-using-proptypes-in-react)                                                                                                                         |
-| 21  | [What are React Fragments?](#what-are-react-fragments)                                                                                                                                                                           |
+| 21  | [What are React hooks? Can you name a few built-in hooks and explain their use cases?](#what-are-react-hooks-can-you-name-a-few-built-in-hooks-and-explain-their-use-cases)                                                      |
+| 22  | [Explain the concept of conditional rendering in React?](#explain-the-concept-of-conditional-rendering-in-react)                                                                                                                 |
+| 23  | [What are the advantages of using arrow functions in React event handlers?](#what-are-the-advantages-of-using-arrow-functions-in-react-event-handlers)                                                                           |
+| 24  | [What are React hooks?](#what-are-react-hooks)                                                                                                                                                                                   |
                                  
 </details>
 
@@ -429,65 +432,89 @@ Hide/Show table of contents
      ```
 
       **[⬆ Back to Top](#table-of-contents)**
+    <br><br>
 
     
-What are React hooks? Can you name a few built-in hooks and explain their use cases?Clarification:
-React hooks are functions that enable functional components to use state and lifecycle features without writing a class. Some built-in hooks include useState for managing state, useEffect for handling side effects, useContext for accessing context, and useReducer for managing more complex state logic.Additional Example:
-jsx
-Copy code
-import React, { useState, useEffect } from 'react';
+21. ### What are React hooks? Can you name a few built-in hooks and explain their use cases?
+    
+     React hooks are functions that enable functional components to use state and lifecycle features without writing a class. Some built-in hooks include useState for managing state, useEffect for handling side effects, useContext for accessing context, and useReducer for managing more complex state logic.
 
-const HooksExample = () => {
-    const [count, setCount] = useState(0);
+     ```jsx harmony
+          import React, { useState, useEffect } from 'react';
+          
+          const HooksExample = () => {
+              const [count, setCount] = useState(0);
+          
+              useEffect(() => {
+                  document.title = `You clicked ${count} times`;
+              }, [count]);
+          
+              return (
+                  <div>
+                      <p>You clicked {count} times</p>
+                      <button onClick={() => setCount(count + 1)}>
+                          Click me
+                      </button>
+                  </div>
+              );
+          };
+          
+          export default HooksExample;
+     ```
 
-    useEffect(() => {
-        document.title = `You clicked ${count} times`;
-    }, [count]);
+      **[⬆ Back to Top](#table-of-contents)**
+    <br><br>
 
-    return (
-        <div>
-            <p>You clicked {count} times</p>
-            <button onClick={() => setCount(count + 1)}>
-                Click me
-            </button>
-        </div>
-    );
-};
+    
+22. ### Explain the concept of conditional rendering in React?
 
-export default HooksExample;
-Explain the concept of conditional rendering in React. Provide an example.Clarification:
-Conditional rendering is the process of dynamically determining whether a component or element should be rendered based on certain conditions. This is typically done using JavaScript expressions or ternary operators inside JSX.Additional Example:
-jsx
-Copy code
-import React from 'react';
+     Conditional rendering is the process of dynamically determining whether a component or element should be rendered based on certain conditions. This is typically done using JavaScript expressions or ternary operators inside JSX.
 
-const ConditionalComponent = ({ isLoggedIn }) => {
-    return isLoggedIn ? <p>Welcome, User!</p> : <p>Please log in.</p>;
-};
+     ```jsx harmony
+          import React from 'react';
+          
+          const ConditionalComponent = ({ isLoggedIn }) => {
+              return isLoggedIn ? <p>Welcome, User!</p> : <p>Please log in.</p>;
+          };
+          
+          export default ConditionalComponent;
+     ```
+     
+      **[⬆ Back to Top](#table-of-contents)**
+    <br><br>
 
-export default ConditionalComponent;
-What are the advantages of using arrow functions in React event handlers?Clarification:
-Arrow functions automatically bind this to the enclosing lexical scope, which eliminates the need to manually bind this in event handlers. This makes the code cleaner and more concise, especially when dealing with complex component hierarchies or passing functions as props.Additional Example:
-jsx
-Copy code
-import React, { useState } from 'react';
+    
+23. ### What are the advantages of using arrow functions in React event handlers?
+    
+     Arrow functions automatically bind this to the enclosing lexical scope, which eliminates the need to manually bind this in event handlers. This makes the code cleaner and more concise, especially when dealing with complex component hierarchies or passing functions as props.
 
-const ArrowFunctionExample = () => {
-    const [count, setCount] = useState(0);
+     ```jsx harmony
+          import React, { useState } from 'react';
+          
+          const ArrowFunctionExample = () => {
+              const [count, setCount] = useState(0);
+          
+              const handleClick = () => {
+                  setCount(count + 1);
+              };
+          
+              return (
+                  <div>
+                      <p>Count: {count}</p>
+                      <button onClick={handleClick}>Increment</button>
+                  </div>
+              );
+          };
 
-    const handleClick = () => {
-        setCount(count + 1);
-    };
+          export default ArrowFunctionExample;
+     ```
+     
+      **[⬆ Back to Top](#table-of-contents)**
+    <br><br>
 
-    return (
-        <div>
-            <p>Count: {count}</p>
-            <button onClick={handleClick}>Increment</button>
-        </div>
-    );
-};
+    
 
-export default ArrowFunctionExample;
+
 
 
 ---
