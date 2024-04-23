@@ -142,7 +142,7 @@ Hide/Show table of contents
           
 7. ### Explain the component lifecycle methods in React?
    
-     React components have several lifecycle methods that execute at different stages of a component's existence. These methods include componentDidMount, componentDidUpdate, componentWillUnmount, etc. They allow developers to hook into different points in a component's lifecycle to perform tasks like fetching data, updating the DOM, or cleaning up resources.
+     React components have several lifecycle methods that execute at different stages of a component's existence. These methods include `componentDidMount`, `componentDidUpdate`, `componentWillUnmount`, etc. They allow developers to hook into different points in a component's lifecycle to perform tasks like fetching data, updating the DOM, or cleaning up resources.
 
      **[⬆ Back to Top](#table-of-contents)**
     <br><br>
@@ -150,7 +150,7 @@ Hide/Show table of contents
    
 8. ### What is the significance of setState in React?
    
-     setState() is a method used to update the state of a React component. When setState() is called, React re-renders the component and its children. It can take an object as an argument to update state properties asynchronously, or a callback function to perform actions after the state has been updated.
+     `setState()` is a method used to update the state of a React component. When `setState()` is called, React re-renders the component and its children. It can take an object as an argument to update state properties asynchronously, or a callback function to perform actions after the state has been updated.
 
      ```jsx harmony
           import React, { Component } from 'react';
@@ -194,7 +194,7 @@ Hide/Show table of contents
    
 10. ### What are controlled components in React?
     
-     Controlled components are components whose form elements (like inputs, selects, and textareas) are controlled by React state. This means that the component renders a form element whose value is controlled by React, and React handles the value changes through state and event handlers.Example:
+     Controlled components are components whose form elements (like inputs, selects, and textareas) are controlled by React state. This means that the component renders a form element whose value is controlled by React, and React handles the value changes through state and event handlers.
 
     ```jsx harmony
      import React, { Component } from 'react';
@@ -232,7 +232,7 @@ Hide/Show table of contents
 11. ### Explain the difference between functional components and class components in React?
 
     Functional components are JavaScript functions that accept props and return React elements. They are simpler and more lightweight than class components, and they can use React hooks to manage state and lifecycle.  <br>
-    Class components are ES6 classes that extend React.Component and have their own state and lifecycle methods.
+    Class components are ES6 classes that extend `React.Component` and have their own state and lifecycle methods.
 
      **[⬆ Back to Top](#table-of-contents)**
     <br><br>
@@ -240,7 +240,7 @@ Hide/Show table of contents
     
 12. ### What are React hooks?
 
-     React hooks are functions that allow functional components to use state, lifecycle, and other React features without writing a class. Examples of hooks include useState, useEffect, useContext, etc. Custom hooks are functions that use hooks internally and allow you to reuse stateful logic between different components.
+     React hooks are functions that allow functional components to use state, lifecycle, and other React features without writing a class. Examples of hooks include `useState`, `useEffect`, `useContext`, etc. Custom hooks are functions that use hooks internally and allow you to reuse stateful logic between different components.
 
      ```jsx harmony
           import { useState } from 'react';
@@ -350,7 +350,7 @@ Hide/Show table of contents
     
 18. ### What are the differences between useState and useReducer hooks in React?
     
-     Both useState and useReducer hooks are used to manage state in functional components. The main difference is that useState is simpler and more suitable for managing independent state variables, while useReducer is more powerful and allows for complex state logic and actions.
+     Both `useState` and `useReducer` hooks are used to manage state in functional components. The main difference is that `useState` is simpler and more suitable for managing independent state variables, while `useReducer` is more powerful and allows for complex state logic and actions.
 
      ```jsx harmony
           import React, { useReducer } from 'react';
@@ -389,7 +389,7 @@ Hide/Show table of contents
 
 19. ### Explain the concept of lazy loading in React?
     
-     Lazy loading is a technique used to defer the loading of non-essential resources (such as components or data) until they are actually needed. In React, lazy loading can be achieved using dynamic imports and the React.lazy() function, which allows you to import components asynchronously.
+     Lazy loading is a technique used to defer the loading of non-essential resources (such as components or data) until they are actually needed. In React, lazy loading can be achieved using dynamic imports and the `React.lazy()` function, which allows you to import components asynchronously.
 
      ```jsx harmony
           import React, { Suspense } from 'react';
@@ -437,7 +437,7 @@ Hide/Show table of contents
     
 21. ### What are React hooks? Can you name a few built-in hooks and explain their use cases?
     
-     React hooks are functions that enable functional components to use state and lifecycle features without writing a class. Some built-in hooks include useState for managing state, useEffect for handling side effects, useContext for accessing context, and useReducer for managing more complex state logic.
+     React hooks are functions that enable functional components to use state and lifecycle features without writing a class. Some built-in hooks include `useState` for managing state, `useEffect` for handling side effects, `useContext` for accessing context, and `useReducer` for managing more complex state logic.
 
      ```jsx harmony
           import React, { useState, useEffect } from 'react';
@@ -486,7 +486,7 @@ Hide/Show table of contents
     
 23. ### What are the advantages of using arrow functions in React event handlers?
     
-     Arrow functions automatically bind this to the enclosing lexical scope, which eliminates the need to manually bind this in event handlers. This makes the code cleaner and more concise, especially when dealing with complex component hierarchies or passing functions as props.
+     Arrow functions automatically bind `this` to the enclosing lexical scope, which eliminates the need to manually bind `this` in event handlers. This makes the code cleaner and more concise, especially when dealing with complex component hierarchies or passing functions as props.
 
      ```jsx harmony
           import React, { useState } from 'react';
