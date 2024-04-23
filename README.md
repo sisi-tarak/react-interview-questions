@@ -47,7 +47,9 @@ Hide/Show table of contents
 
 ---
 <br>
+
 ## React Questions
+
 <br>
 
 1.  ### What is React?
