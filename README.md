@@ -854,6 +854,9 @@ Hide/Show table of contents
 38. ### What are the benefits of using React's strict mode?
 
      React's strict mode is a feature that helps detect potential problems in your code by highlighting unsafe lifecycles, legacy string ref usage, and more. It's used to identify and fix common mistakes in React applications. Strict mode can be enabled by wrapping your application in a `<React.StrictMode>` component or adding `{ strictMode: true }` to the ReactDOM.render options.
+              
+      **[⬆ Back to Top](#table-of-contents)**
+    <br><br>
 
 
 
