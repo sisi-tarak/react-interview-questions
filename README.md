@@ -48,9 +48,13 @@ Hide/Show table of contents
 | 29  | [What is the purpose of memo in React?](#what-is-the-purpose-of-memo-in-react)                                                                                                                                                   |
 | 30  | [What is server-side rendering (SSR) in React? How does it differ from client-side rendering (CSR)?](#what-is-server-side-rendering-ssr-in-react-how-does-it-differ-from-client-side-rendering-csr)                              |
 | 31  | [Explain the concept of code splitting in React?](#explain-the-concept-of-code-splitting-in-react)                                                                                                                               |
-| 32  | [](#what-are-)                                                                                                                                                                                                                   |
-| 33  | [](#what-are-)                                                                                                                                                                                                                   |
-| 34  | [](#what-are-)                                                                                                                                                                                                                   |
+| 32  | [Explain the concept of React Suspense?](#what-are-)                                                                                                                                                                             |
+| 33  | [What are the benefits of using React hooks over class components?](#what-are-the-benifits-of-using-react-hooks-over-class-components)                                                                                           |
+| 34  | [Explain the concept of memoization in React?](#explain-the-concept-of-memoization-in-react)                                                                                                                                     |
+| 35  | [What are the differences between React's setState() and useState() hooks?](#what-are-the-differences-between-reacts-setstate-and-usestate-hooks)                                                                                |
+| 36  | [What is the purpose of the children prop in React?](#what-is-the-purpose-of-the-children-prop-in-react)                                                                                                                         |
+| 37  | [Explain the concept of useRef() hook in React?](#explain-the-concept-of-useref-hook-in-react)                                                                                                                                   |
+| 38  | [What are the benefits of using React's strict mode?](#what-are-the-benefits-of-using-reacts-strict-mode)                                                                                                                        |
                                  
 </details>
 
