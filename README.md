@@ -516,8 +516,244 @@ Hide/Show table of contents
     <br><br>
 
     
+24. ### What is the purpose of useEffect hook in React? How does it differ from componentDidMount and componentDidUpdate lifecycle methods?
 
+     The `useEffect` hook in React is used to perform side effects in functional components. It combines the functionality of `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` lifecycle methods in class components. It's called after every render and allows you to perform data fetching, subscriptions, or manually changing the DOM.
 
+     ```jsx
+         import React, { useState, useEffect } from 'react';
+     
+         const EffectExample = () => {
+             const [count, setCount] = useState(0);
+     
+             useEffect(() => {
+                 document.title = `You clicked ${count} times`;
+             }, [count]);
+     
+             return (
+                 <div>
+                     <p>You clicked {count} times</p>
+                     <button onClick={() => setCount(count + 1)}>
+                         Click me
+                     </button>
+                 </div>
+             );
+         };
+     
+         export default EffectExample;
+     ```
+          
+      **[⬆ Back to Top](#table-of-contents)**
+    <br><br>
+
+  
+25. ### What are React portals?
+
+     React portals provide a way to render children into a DOM node that exists outside the DOM hierarchy of the parent component. This is useful for scenarios like modals, tooltips, or dropdown menus where you want to render content at a different location in the DOM tree.
+
+     ```jsx
+         import React, { useState } from 'react';
+         import ReactDOM from 'react-dom';
+     
+         const PortalExample = () => {
+             const [showModal, setShowModal] = useState(false);
+     
+             return (
+                 <div>
+                     <button onClick={() => setShowModal(true)}>Open Modal</button>
+                     {showModal &&
+                         ReactDOM.createPortal(
+                             <div className="modal">
+                                 <div className="modal-content">
+                                     <span className="close" onClick={() => setShowModal(false)}>
+                                         &times;
+                                     </span>
+                                     <p>This is a modal</p>
+                                 </div>
+                             </div>,
+                             document.getElementById('modal-root')
+                         )}
+                 </div>
+             );
+         };
+     
+         export default PortalExample;
+     ```
+          
+      **[⬆ Back to Top](#table-of-contents)**
+    <br><br>
+
+  
+26. ### What is the purpose of React Router?
+
+     React Router is a library that allows you to handle routing in React applications. It provides components like `BrowserRouter`, `Route`, `Link`, etc., for declarative routing. React Router enables navigation between different components/pages of a single-page application.
+
+     ```jsx
+         import React from 'react';
+         import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+     
+         const Home = () => <h2>Home</h2>;
+         const About = () => <h2>About</h2>;
+     
+         const RoutingExample = () => (
+             <Router>
+                 <div>
+                     <nav>
+                         <ul>
+                             <li>
+                                 <Link to="/">Home</Link>
+                             </li>
+                             <li>
+                                 <Link to="/about">About</Link>
+                             </li>
+                         </ul>
+                     </nav>
+                     <Route path="/" exact component={Home} />
+                     <Route path="/about" component={About} />
+                 </div>
+             </Router>
+         );
+     
+         export default RoutingExample;
+     ```
+          
+      **[⬆ Back to Top](#table-of-contents)**
+    <br><br>
+
+  
+27. ### Explain the concept of error boundaries in React?
+
+     Error boundaries in React are components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of crashing the entire application. Error boundaries are useful for handling errors in components with asynchronous code, third-party libraries, or complex UI logic.
+
+     ```jsx
+         import React, { Component } from 'react';
+     
+         class ErrorBoundary extends Component {
+             constructor(props) {
+                 super(props);
+                 this.state = { hasError: false };
+             }
+     
+             static getDerivedStateFromError(error) {
+                 return { hasError: true };
+             }
+     
+             componentDidCatch(error, errorInfo) {
+                 console.error('Error:', error);
+                 console.error('Error Info:', errorInfo);
+             }
+     
+             render() {
+                 if (this.state.hasError) {
+                     return <h1>Something went wrong.</h1>;
+                 }
+                 return this.props.children;
+             }
+         }
+     
+         export default ErrorBoundary;
+     ```
+          
+      **[⬆ Back to Top](#table-of-contents)**
+    <br><br>
+
+  
+28. ### What are controlled and uncontrolled components in React?
+
+     Controlled components are components whose form elements (like inputs, selects, and textareas) are controlled by React state. Uncontrolled components are components whose form elements are not controlled by React state but instead rely on the DOM to manage their state.
+
+     ```jsx
+         // Controlled Component
+         import React, { useState } from 'react';
+     
+         const ControlledComponent = () => {
+             const [value, setValue] = useState('');
+     
+             const handleChange = (event) => {
+                 setValue(event.target.value);
+             };
+     
+             return (
+                 <input
+                     type="text"
+                     value={value}
+                     onChange={handleChange}
+                 />
+             );
+         };
+     
+         export default ControlledComponent;
+    ```
+
+    ```jsx
+         // Uncontrolled Component
+         import React from 'react';
+     
+         const UncontrolledComponent = () => (
+             <input
+                 type="text"
+                 defaultValue="Initial Value"
+             />
+         );
+     
+         export default UncontrolledComponent;
+    ```
+         
+      **[⬆ Back to Top](#table-of-contents)**
+    <br><br>
+
+  
+29. ### What is the purpose of memo in React?
+
+     The `memo` function in React is a higher-order component that memoizes the result of a functional component rendering. It's similar to `PureComponent` for class components and prevents unnecessary re-renders by caching the result of the component's render method.
+
+      ```jsx
+         import React, { memo } from 'react';
+     
+         const MemoizedComponent = memo(({ name }) => {
+             console.log('Rendering MemoizedComponent');
+             return <p>Hello, {name}!</p>;
+         });
+     
+         export default MemoizedComponent;
+    ```
+           
+      **[⬆ Back to Top](#table-of-contents)**
+    <br><br>
+
+  
+30. ### What is server-side rendering (SSR) in React? How does it differ from client-side rendering (CSR)?
+
+     Server-side rendering (SSR) is the process of rendering React components on the server and sending the generated HTML to the client. This allows search engines and social media crawlers to index the content and improves performance by reducing the time to first meaningful paint. Client-side rendering (CSR), on the other hand, renders React components in the browser using JavaScript. <br>
+
+     In SSR, the initial HTML content is sent from the server to the client, which can improve SEO and reduce time to content for users. CSR, on the other hand, sends a minimal HTML file with JavaScript, which then fetches and renders the content in the browser.
+     
+      **[⬆ Back to Top](#table-of-contents)**
+    <br><br>
+
+  
+31. ### Explain the concept of code splitting in React?
+
+     Code splitting is a technique used to split your code into smaller bundles that can be loaded on demand. This helps reduce the initial bundle size and improve performance by only loading the code that is necessary for the current route or feature. In React, code splitting can be implemented using dynamic imports or `React.lazy()` for components.
+
+     ```jsx
+         import React, { lazy, Suspense } from 'react';
+     
+         const LazyLoadedComponent = lazy(() => import('./LazyLoadedComponent'));
+     
+         const CodeSplittingExample = () => (
+             <Suspense fallback={<div>Loading...</div>}>
+                 <LazyLoadedComponent />
+             </Suspense>
+         );
+     
+         export default CodeSplittingExample;
+    ```
+          
+      **[⬆ Back to Top](#table-of-contents)**
+    <br><br>
+
+  
 
 
 ---
