@@ -863,11 +863,11 @@ Hide/Show table of contents
 
      React Router is a popular library for managing client-side routing in React applications. It enables navigation between different views (components) based on URL changes, providing a seamless single-page application (SPA) experience. <br>
      
-     **Benefits:**
-         - Simplifies navigation management: Defines routes and components to render for each route.
-         - Improved SEO: Supports server-side rendering (SSR) for better search engine indexing.
-         - User experience: Smooth transitions between views with minimal full page reloads.
-         - Code organization: Encourages component-based routing for better maintainability.
+     **Benefits:** <br>
+         - Simplifies navigation management: Defines routes and components to render for each route. <br>
+         - Improved SEO: Supports server-side rendering (SSR) for better search engine indexing. <br>
+         - User experience: Smooth transitions between views with minimal full page reloads. <br>
+         - Code organization: Encourages component-based routing for better maintainability. <br>
                   
       **[⬆ Back to Top](#table-of-contents)**
     <br><br>
@@ -875,7 +875,7 @@ Hide/Show table of contents
 
 40. ### Explain the difference between BrowserRouter and HashRouter in React Router?
 
-     Both are top-level components that provide routing context for your app.
+     Both are top-level components that provide routing context for your app. <br>
          - `BrowserRouter` (default): Uses the History API for cleaner URLs that don't include a hash (`#`). Requires server-side configuration for proper initial page load (e.g., setting up a catch-all route to serve the index.html).
          - `HashRouter`: Fallback option for browsers that don't support the History API. Uses a hash fragment (`#`) in the URL, which might be less visually appealing.
 
