@@ -875,9 +875,9 @@ Hide/Show table of contents
 
 40. ### Explain the difference between BrowserRouter and HashRouter in React Router?
 
-     Both are top-level components that provide routing context for your app. <br>
-         - `BrowserRouter` (default): Uses the History API for cleaner URLs that don't include a hash (`#`). Requires server-side configuration for proper initial page load (e.g., setting up a catch-all route to serve the index.html).
-         - `HashRouter`: Fallback option for browsers that don't support the History API. Uses a hash fragment (`#`) in the URL, which might be less visually appealing.
+     Both are top-level components that provide routing context for your app. <br> <br>
+         - `BrowserRouter` (default): Uses the History API for cleaner URLs that don't include a hash (`#`). Requires server-side configuration for proper initial page load (e.g., setting up a catch-all route to serve the index.html). <br>
+         - `HashRouter`: Fallback option for browsers that don't support the History API. Uses a hash fragment (`#`) in the URL, which might be less visually appealing. <br>
 
      ```jsx
           import { BrowserRouter, HashRouter } from 'react-router-dom';
@@ -905,9 +905,9 @@ Hide/Show table of contents
 
 41. ### How do you define routes in React Router?
 
-     Routes are defined using the `Route` component from React Router. It takes two main props: <br>
-         - `path`: A string representing the URL pattern (e.g., `/about`, `/products/:id`). Wildcards (`*`) can be used for dynamic segments.
-         - `component`: The React component to render when the URL matches the `path`.
+     Routes are defined using the `Route` component from React Router. It takes two main props: <br> <br>
+         - `path`: A string representing the URL pattern (e.g., `/about`, `/products/:id`). Wildcards (`*`) can be used for dynamic segments. <br>
+         - `component`: The React component to render when the URL matches the `path`. <br>
 
      ```jsx
           import { Route, Routes } from 'react-router-dom';
@@ -932,8 +932,8 @@ Hide/Show table of contents
 
 42. ### How do you pass parameters to components using React Router?
 
-     Dynamic route segments captured with wildcards (`:` in `path`) can be accessed as props within the component. To access these parameters: <br>
-         - Use the `useParams` hook from React Router.
+     Dynamic route segments captured with wildcards (`:` in `path`) can be accessed as props within the component. To access these parameters: <br> <br>
+         - Use the `useParams` hook from React Router. <br>
          - Destructure the desired parameter from the returned object.
 
      ```jsx
