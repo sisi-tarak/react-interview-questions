@@ -117,7 +117,7 @@ Hide/Show table of contents
    
      JSX (JavaScript XML) is a syntax extension for JavaScript used in React to describe the structure of UI components. It allows developers to write HTML-like code directly in JavaScript. JSX is compiled into regular JavaScript functions by tools like Babel before being executed by the browser.
 
-   ```jsx harmony
+     ```jsx harmony
      import React from 'react';
      import ReactDOM from 'react-dom';
      
@@ -131,7 +131,7 @@ Hide/Show table of contents
      };
      
      ReactDOM.render(<App />, document.getElementById('root'));
-   ```
+     ```
    
      **[⬆ Back to Top](#table-of-contents)**
     <br><br>
@@ -147,9 +147,9 @@ Hide/Show table of contents
 
 6. ### What is the significance of keys in React lists?
 
-   Keys are special string attributes used by React to identify which items have changed, been added, or been removed in a list of elements. Keys help React efficiently update the UI by minimizing re-renders. Keys should be unique among siblings, but don't need to be globally unique.
+     Keys are special string attributes used by React to identify which items have changed, been added, or been removed in a list of elements. Keys help React efficiently update the UI by minimizing re-renders. Keys should be unique among siblings, but don't need to be globally unique.
 
-   ```jsx harmony
+     ```jsx harmony
      const ListComponent = () => {
          const items = ['apple', 'banana', 'cherry'];
      
@@ -161,7 +161,7 @@ Hide/Show table of contents
              </ul>
          );
      };
-   ```
+     ```
 
      **[⬆ Back to Top](#table-of-contents)**
     <br><br>
@@ -180,31 +180,31 @@ Hide/Show table of contents
      `setState()` is a method used to update the state of a React component. When `setState()` is called, React re-renders the component and its children. It can take an object as an argument to update state properties asynchronously, or a callback function to perform actions after the state has been updated.
 
      ```jsx harmony
-          import React, { Component } from 'react';
-          
-          class Counter extends Component {
-              constructor(props) {
-                  super(props);
-                  this.state = {
-                      count: 0
-                  };
-              }
-          
-              incrementCount = () => {
-                  this.setState({ count: this.state.count + 1 });
-              };
-          
-              render() {
-                  return (
-                      <div>
-                          <p>Count: {this.state.count}</p>
-                          <button onClick={this.incrementCount}>Increment</button>
-                      </div>
-                  );
-              }
-          }
-          
-          export default Counter;
+     import React, { Component } from 'react';
+     
+     class Counter extends Component {
+         constructor(props) {
+             super(props);
+             this.state = {
+                 count: 0
+             };
+         }
+     
+         incrementCount = () => {
+             this.setState({ count: this.state.count + 1 });
+         };
+     
+         render() {
+             return (
+                 <div>
+                     <p>Count: {this.state.count}</p>
+                     <button onClick={this.incrementCount}>Increment</button>
+                 </div>
+             );
+         }
+     }
+     
+     export default Counter;
      ```
 
      **[⬆ Back to Top](#table-of-contents)**
@@ -223,7 +223,7 @@ Hide/Show table of contents
     
      Controlled components are components whose form elements (like inputs, selects, and textareas) are controlled by React state. This means that the component renders a form element whose value is controlled by React, and React handles the value changes through state and event handlers.
 
-    ```jsx harmony
+     ```jsx harmony
      import React, { Component } from 'react';
      
      class ControlledComponent extends Component {
@@ -250,7 +250,7 @@ Hide/Show table of contents
      }
      
      export default ControlledComponent;
-    ```
+     ```
 
      **[⬆ Back to Top](#table-of-contents)**
     <br><br>
@@ -270,19 +270,19 @@ Hide/Show table of contents
      React hooks are functions that allow functional components to use state, lifecycle, and other React features without writing a class. Examples of hooks include `useState`, `useEffect`, `useContext`, etc. Custom hooks are functions that use hooks internally and allow you to reuse stateful logic between different components.
 
      ```jsx harmony
-          import { useState } from 'react';
-          
-          const useCounter = (initialCount) => {
-              const [count, setCount] = useState(initialCount);
-          
-              const increment = () => {
-                  setCount(count + 1);
-              };
-          
-              return { count, increment };
-          };
-          
-          export default useCounter;
+     import { useState } from 'react';
+     
+     const useCounter = (initialCount) => {
+         const [count, setCount] = useState(initialCount);
+     
+         const increment = () => {
+             setCount(count + 1);
+         };
+     
+         return { count, increment };
+     };
+     
+     export default useCounter;
      ```
 
      **[⬆ Back to Top](#table-of-contents)**
@@ -302,24 +302,24 @@ Hide/Show table of contents
      Refs in React provide a way to access the underlying DOM nodes or React elements directly. They are primarily used for managing focus, integrating with third-party DOM libraries, or triggering imperative animations.
 
       ```jsx harmony
-          import React, { useRef } from 'react';
-          
-          const RefExample = () => {
-              const inputRef = useRef(null);
-          
-              const focusInput = () => {
-                  inputRef.current.focus();
-              };
-          
-              return (
-                  <div>
-                      <input ref={inputRef} type="text" />
-                      <button onClick={focusInput}>Focus Input</button>
-                  </div>
-              );
-          };
-          
-          export default RefExample;
+     import React, { useRef } from 'react';
+     
+     const RefExample = () => {
+         const inputRef = useRef(null);
+     
+         const focusInput = () => {
+             inputRef.current.focus();
+         };
+     
+         return (
+             <div>
+                 <input ref={inputRef} type="text" />
+                 <button onClick={focusInput}>Focus Input</button>
+             </div>
+         );
+     };
+     
+     export default RefExample;
      ```
 
      **[⬆ Back to Top](#table-of-contents)**
@@ -331,24 +331,24 @@ Hide/Show table of contents
      Context in React provides a way to pass data through the component tree without having to pass props manually at every level. It's primarily used when some data needs to be accessible by many components at different nesting levels.
 
      ```jsx harmony
-          import React, { createContext, useContext } from 'react';
-          
-          const ThemeContext = createContext('light');
-          
-          const ThemedComponent = () => {
-              const theme = useContext(ThemeContext);
-              return <p>Current Theme: {theme}</p>;
-          };
-          
-          const ContextExample = () => {
-              return (
-                  <ThemeContext.Provider value="dark">
-                      <ThemedComponent />
-                  </ThemeContext.Provider>
-              );
-          };
-          
-          export default ContextExample;
+     import React, { createContext, useContext } from 'react';
+     
+     const ThemeContext = createContext('light');
+     
+     const ThemedComponent = () => {
+         const theme = useContext(ThemeContext);
+         return <p>Current Theme: {theme}</p>;
+     };
+     
+     const ContextExample = () => {
+         return (
+             <ThemeContext.Provider value="dark">
+                 <ThemedComponent />
+             </ThemeContext.Provider>
+         );
+     };
+     
+     export default ContextExample;
      ```
      
      **[⬆ Back to Top](#table-of-contents)**
