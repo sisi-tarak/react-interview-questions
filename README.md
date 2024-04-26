@@ -649,34 +649,34 @@ Hide/Show table of contents
 
      Error boundaries in React are components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of crashing the entire application. Error boundaries are useful for handling errors in components with asynchronous code, third-party libraries, or complex UI logic.
 
-     ```jsx
-         import React, { Component } from 'react';
-     
-         class ErrorBoundary extends Component {
-             constructor(props) {
-                 super(props);
-                 this.state = { hasError: false };
-             }
-     
-             static getDerivedStateFromError(error) {
-                 return { hasError: true };
-             }
-     
-             componentDidCatch(error, errorInfo) {
-                 console.error('Error:', error);
-                 console.error('Error Info:', errorInfo);
-             }
-     
-             render() {
-                 if (this.state.hasError) {
-                     return <h1>Something went wrong.</h1>;
-                 }
-                 return this.props.children;
-             }
-         }
-     
-         export default ErrorBoundary;
-     ```
+    ```jsx
+    import React, { Component } from 'react';
+
+    class ErrorBoundary extends Component {
+        constructor(props) {
+            super(props);
+            this.state = { hasError: false };
+        }
+
+        static getDerivedStateFromError(error) {
+            return { hasError: true };
+        }
+
+        componentDidCatch(error, errorInfo) {
+            console.error('Error:', error);
+            console.error('Error Info:', errorInfo);
+        }
+
+        render() {
+            if (this.state.hasError) {
+                return <h1>Something went wrong.</h1>;
+            }
+            return this.props.children;
+        }
+    }
+
+    export default ErrorBoundary;
+    ```
           
       **[⬆ Back to Top](#table-of-contents)**
     <br><br>
@@ -686,41 +686,41 @@ Hide/Show table of contents
 
      Controlled components are components whose form elements (like inputs, selects, and textareas) are controlled by React state. Uncontrolled components are components whose form elements are not controlled by React state but instead rely on the DOM to manage their state.
 
-     ```jsx
-         // Controlled Component
-         import React, { useState } from 'react';
-     
-         const ControlledComponent = () => {
-             const [value, setValue] = useState('');
-     
-             const handleChange = (event) => {
-                 setValue(event.target.value);
-             };
-     
-             return (
-                 <input
-                     type="text"
-                     value={value}
-                     onChange={handleChange}
-                 />
-             );
-         };
-     
-         export default ControlledComponent;
+    ```jsx
+    // Controlled Component
+    import React, { useState } from 'react';
+
+    const ControlledComponent = () => {
+        const [value, setValue] = useState('');
+
+        const handleChange = (event) => {
+            setValue(event.target.value);
+        };
+
+        return (
+            <input
+                type="text"
+                value={value}
+                onChange={handleChange}
+            />
+        );
+    };
+
+    export default ControlledComponent;
     ```
 
     ```jsx
-         // Uncontrolled Component
-         import React from 'react';
-     
-         const UncontrolledComponent = () => (
-             <input
-                 type="text"
-                 defaultValue="Initial Value"
-             />
-         );
-     
-         export default UncontrolledComponent;
+    // Uncontrolled Component
+    import React from 'react';
+
+    const UncontrolledComponent = () => (
+        <input
+            type="text"
+            defaultValue="Initial Value"
+        />
+    );
+
+    export default UncontrolledComponent;
     ```
          
       **[⬆ Back to Top](#table-of-contents)**
@@ -731,15 +731,15 @@ Hide/Show table of contents
 
      The `memo` function in React is a higher-order component that memoizes the result of a functional component rendering. It's similar to `PureComponent` for class components and prevents unnecessary re-renders by caching the result of the component's render method.
 
-      ```jsx
-         import React, { memo } from 'react';
-     
-         const MemoizedComponent = memo(({ name }) => {
-             console.log('Rendering MemoizedComponent');
-             return <p>Hello, {name}!</p>;
-         });
-     
-         export default MemoizedComponent;
+    ```jsx
+    import React, { memo } from 'react';
+
+    const MemoizedComponent = memo(({ name }) => {
+        console.log('Rendering MemoizedComponent');
+        return <p>Hello, {name}!</p>;
+    });
+
+    export default MemoizedComponent;
     ```
            
       **[⬆ Back to Top](#table-of-contents)**
@@ -760,18 +760,18 @@ Hide/Show table of contents
 
      Code splitting is a technique used to split your code into smaller bundles that can be loaded on demand. This helps reduce the initial bundle size and improve performance by only loading the code that is necessary for the current route or feature. In React, code splitting can be implemented using dynamic imports or `React.lazy()` for components.
 
-     ```jsx
-         import React, { lazy, Suspense } from 'react';
-     
-         const LazyLoadedComponent = lazy(() => import('./LazyLoadedComponent'));
-     
-         const CodeSplittingExample = () => (
-             <Suspense fallback={<div>Loading...</div>}>
-                 <LazyLoadedComponent />
-             </Suspense>
-         );
-     
-         export default CodeSplittingExample;
+    ```jsx
+    import React, { lazy, Suspense } from 'react';
+
+    const LazyLoadedComponent = lazy(() => import('./LazyLoadedComponent'));
+
+    const CodeSplittingExample = () => (
+        <Suspense fallback={<div>Loading...</div>}>
+            <LazyLoadedComponent />
+        </Suspense>
+    );
+
+    export default CodeSplittingExample;
     ```
           
       **[⬆ Back to Top](#table-of-contents)**
@@ -817,15 +817,15 @@ Hide/Show table of contents
      The `children` prop in React is a special prop that allows components to accept arbitrary JSX as children. It's useful for creating reusable components that can wrap other components or elements.
 
     ```jsx
-         import React from 'react';
-     
-         const WrapperComponent = ({ children }) => (
-             <div className="wrapper">
-                 {children}
-             </div>
-         );
-     
-         export default WrapperComponent;
+    import React from 'react';
+
+    const WrapperComponent = ({ children }) => (
+        <div className="wrapper">
+            {children}
+        </div>
+    );
+
+    export default WrapperComponent;
     ```
              
       **[⬆ Back to Top](#table-of-contents)**
@@ -836,25 +836,25 @@ Hide/Show table of contents
 
      The `useRef()` hook in React returns a mutable ref object whose `.current` property is initialized to the passed argument (initialValue). It's primarily used to access DOM nodes or React elements directly, or to persist values between renders without causing re-renders.
 
-     ```jsx
-         import React, { useRef } from 'react';
-     
-         const InputWithFocus = () => {
-             const inputRef = useRef();
-     
-             const focusInput = () => {
-                 inputRef.current.focus();
-             };
-     
-             return (
-                 <div>
-                     <input ref={inputRef} type="text" />
-                     <button onClick={focusInput}>Focus Input</button>
-                 </div>
-             );
-         };
-     
-         export default InputWithFocus;
+    ```jsx
+    import React, { useRef } from 'react';
+
+    const InputWithFocus = () => {
+        const inputRef = useRef();
+
+        const focusInput = () => {
+            inputRef.current.focus();
+        };
+
+        return (
+            <div>
+                <input ref={inputRef} type="text" />
+                <button onClick={focusInput}>Focus Input</button>
+            </div>
+        );
+    };
+
+    export default InputWithFocus;
     ```
               
       **[⬆ Back to Top](#table-of-contents)**
@@ -890,23 +890,23 @@ Hide/Show table of contents
          - `HashRouter`: Fallback option for browsers that don't support the History API. Uses a hash fragment (`#`) in the URL, which might be less visually appealing. <br> <br>
 
      ```jsx
-          import { BrowserRouter, HashRouter } from 'react-router-dom';
-          
-          function App() {
-            return (
-              <div>
-                {/* Using BrowserRouter for clean URLs */}
-                <BrowserRouter>
-                  {/* Your routes and components here */}
-                </BrowserRouter>
-          
-                {/* Using HashRouter as a fallback */}
-                <HashRouter>
-                  {/* Alternative routes for unsupported browsers */}
-                </HashRouter>
-              </div>
-            );
-          }
+     import { BrowserRouter, HashRouter } from 'react-router-dom';
+     
+     function App() {
+       return (
+         <div>
+           {/* Using BrowserRouter for clean URLs */}
+           <BrowserRouter>
+             {/* Your routes and components here */}
+           </BrowserRouter>
+     
+           {/* Using HashRouter as a fallback */}
+           <HashRouter>
+             {/* Alternative routes for unsupported browsers */}
+           </HashRouter>
+         </div>
+       );
+     }
      ```
                    
       **[⬆ Back to Top](#table-of-contents)**
@@ -920,20 +920,20 @@ Hide/Show table of contents
          - `component`: The React component to render when the URL matches the `path`. <br> <br>
 
      ```jsx
-          import { Route, Routes } from 'react-router-dom';
-          import Home from './Home';
-          import About from './About';
-          import ProductDetails from './ProductDetails';
-          
-          function App() {
-            return (
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/products/:productId" element={<ProductDetails />} />
-              </Routes>
-            );
-          }
+     import { Route, Routes } from 'react-router-dom';
+     import Home from './Home';
+     import About from './About';
+     import ProductDetails from './ProductDetails';
+     
+     function App() {
+       return (
+         <Routes>
+           <Route path="/" element={<Home />} />
+           <Route path="/about" element={<About />} />
+           <Route path="/products/:productId" element={<ProductDetails />} />
+         </Routes>
+       );
+     }
      ```
                    
       **[⬆ Back to Top](#table-of-contents)**
@@ -947,18 +947,18 @@ Hide/Show table of contents
          - Destructure the desired parameter from the returned object. <br> <br>
 
      ```jsx
-          import { useParams } from 'react-router-dom';
-          
-          function ProductDetails() {
-            const { productId } = useParams(); // Access the parameter
-          
-            return (
-              <div>
-                <h1>Product Details for ID: {productId}</h1>
-                {/* Fetch or display product details based on productId */}
-              </div>
-            );
-          }
+     import { useParams } from 'react-router-dom';
+     
+     function ProductDetails() {
+       const { productId } = useParams(); // Access the parameter
+     
+       return (
+         <div>
+           <h1>Product Details for ID: {productId}</h1>
+           {/* Fetch or display product details based on productId */}
+         </div>
+       );
+     }
      ```
                    
       **[⬆ Back to Top](#table-of-contents)**
@@ -970,24 +970,24 @@ Hide/Show table of contents
     Nested routing allows you to define hierarchical routes within a parent route. Use nested `Route` components to create sub-routes within a specific path.
 
      ```jsx
-          import { Route, Routes } from 'react-router-dom';
-          import Home from './Home';
-          import About from './About';
-          import Products from './Products';
-          import ProductDetails from './ProductDetails';
-          
-          function App() {
-            return (
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/products">
-                  <Route index element={<Products />} /> {/* Sub-route for /products */}
-                  <Route path=":productId" element={<ProductDetails />} /> {/* Nested route for product details */}
-                </Route>
-              </Routes>
-            );
-          }
+     import { Route, Routes } from 'react-router-dom';
+     import Home from './Home';
+     import About from './About';
+     import Products from './Products';
+     import ProductDetails from './ProductDetails';
+     
+     function App() {
+       return (
+         <Routes>
+           <Route path="/" element={<Home />} />
+           <Route path="/about" element={<About />} />
+           <Route path="/products">
+             <Route index element={<Products />} /> {/* Sub-route for /products */}
+             <Route path=":productId" element={<ProductDetails />} /> {/* Nested route for product details */}
+           </Route>
+         </Routes>
+       );
+     }
      ```
                    
       **[⬆ Back to Top](#table-of-contents)**
