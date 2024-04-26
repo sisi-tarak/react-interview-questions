@@ -380,34 +380,34 @@ Hide/Show table of contents
      Both `useState` and `useReducer` hooks are used to manage state in functional components. The main difference is that `useState` is simpler and more suitable for managing independent state variables, while `useReducer` is more powerful and allows for complex state logic and actions.
 
      ```jsx harmony
-          import React, { useReducer } from 'react';
-          
-          const initialState = { count: 0 };
-          
-          const reducer = (state, action) => {
-              switch (action.type) {
-                  case 'increment':
-                      return { count: state.count + 1 };
-                  case 'decrement':
-                      return { count: state.count - 1 };
-                  default:
-                      return state;
-              }
-          };
-          
-          const ReducerExample = () => {
-              const [state, dispatch] = useReducer(reducer, initialState);
-          
-              return (
-                  <div>
-                      Count: {state.count}
-                      <button onClick={() => dispatch({ type: 'increment' })}>Increment</button>
-                      <button onClick={() => dispatch({ type: 'decrement' })}>Decrement</button>
-                  </div>
-              );
-          };
-          
-          export default ReducerExample;
+     import React, { useReducer } from 'react';
+     
+     const initialState = { count: 0 };
+     
+     const reducer = (state, action) => {
+         switch (action.type) {
+             case 'increment':
+                 return { count: state.count + 1 };
+             case 'decrement':
+                 return { count: state.count - 1 };
+             default:
+                 return state;
+         }
+     };
+     
+     const ReducerExample = () => {
+         const [state, dispatch] = useReducer(reducer, initialState);
+     
+         return (
+             <div>
+                 Count: {state.count}
+                 <button onClick={() => dispatch({ type: 'increment' })}>Increment</button>
+                 <button onClick={() => dispatch({ type: 'decrement' })}>Decrement</button>
+             </div>
+         );
+     };
+     
+     export default ReducerExample;
      ```
 
       **[⬆ Back to Top](#table-of-contents)**
@@ -419,17 +419,17 @@ Hide/Show table of contents
      Lazy loading is a technique used to defer the loading of non-essential resources (such as components or data) until they are actually needed. In React, lazy loading can be achieved using dynamic imports and the `React.lazy()` function, which allows you to import components asynchronously.
 
      ```jsx harmony
-          import React, { Suspense } from 'react';
-          
-          const LazyLoadedComponent = React.lazy(() => import('./LazyLoadedComponent'));
-          
-          const LazyLoadingExample = () => (
-              <Suspense fallback={<div>Loading...</div>}>
-                  <LazyLoadedComponent />
-              </Suspense>
-          );
-          
-          export default LazyLoadingExample;
+     import React, { Suspense } from 'react';
+     
+     const LazyLoadedComponent = React.lazy(() => import('./LazyLoadedComponent'));
+     
+     const LazyLoadingExample = () => (
+         <Suspense fallback={<div>Loading...</div>}>
+             <LazyLoadedComponent />
+         </Suspense>
+     );
+     
+     export default LazyLoadingExample;
      ```
 
       **[⬆ Back to Top](#table-of-contents)**
@@ -440,22 +440,22 @@ Hide/Show table of contents
      PropTypes is a runtime type checking mechanism for React props. It helps catch bugs early by providing a way to specify the type of each prop a component should receive. PropTypes also serve as documentation for components, making it easier for other developers to understand how to use them.
 
      ```jsx harmony
-          import React from 'react';
-          import PropTypes from 'prop-types';
-          
-          const MyComponent = ({ name, age }) => (
-              <div>
-                  <p>Name: {name}</p>
-                  <p>Age: {age}</p>
-              </div>
-          );
-          
-          MyComponent.propTypes = {
-              name: PropTypes.string.isRequired,
-              age: PropTypes.number.isRequired
-          };
-          
-          export default MyComponent;
+     import React from 'react';
+     import PropTypes from 'prop-types';
+     
+     const MyComponent = ({ name, age }) => (
+         <div>
+             <p>Name: {name}</p>
+             <p>Age: {age}</p>
+         </div>
+     );
+     
+     MyComponent.propTypes = {
+         name: PropTypes.string.isRequired,
+         age: PropTypes.number.isRequired
+     };
+     
+     export default MyComponent;
      ```
 
       **[⬆ Back to Top](#table-of-contents)**
@@ -467,26 +467,26 @@ Hide/Show table of contents
      React hooks are functions that enable functional components to use state and lifecycle features without writing a class. Some built-in hooks include `useState` for managing state, `useEffect` for handling side effects, `useContext` for accessing context, and `useReducer` for managing more complex state logic.
 
      ```jsx harmony
-          import React, { useState, useEffect } from 'react';
-          
-          const HooksExample = () => {
-              const [count, setCount] = useState(0);
-          
-              useEffect(() => {
-                  document.title = `You clicked ${count} times`;
-              }, [count]);
-          
-              return (
-                  <div>
-                      <p>You clicked {count} times</p>
-                      <button onClick={() => setCount(count + 1)}>
-                          Click me
-                      </button>
-                  </div>
-              );
-          };
-          
-          export default HooksExample;
+     import React, { useState, useEffect } from 'react';
+     
+     const HooksExample = () => {
+         const [count, setCount] = useState(0);
+     
+         useEffect(() => {
+             document.title = `You clicked ${count} times`;
+         }, [count]);
+     
+         return (
+             <div>
+                 <p>You clicked {count} times</p>
+                 <button onClick={() => setCount(count + 1)}>
+                     Click me
+                 </button>
+             </div>
+         );
+     };
+     
+     export default HooksExample;
      ```
 
       **[⬆ Back to Top](#table-of-contents)**
@@ -498,13 +498,13 @@ Hide/Show table of contents
      Conditional rendering is the process of dynamically determining whether a component or element should be rendered based on certain conditions. This is typically done using JavaScript expressions or ternary operators inside JSX.
 
      ```jsx harmony
-          import React from 'react';
-          
-          const ConditionalComponent = ({ isLoggedIn }) => {
-              return isLoggedIn ? <p>Welcome, User!</p> : <p>Please log in.</p>;
-          };
-          
-          export default ConditionalComponent;
+     import React from 'react';
+     
+     const ConditionalComponent = ({ isLoggedIn }) => {
+         return isLoggedIn ? <p>Welcome, User!</p> : <p>Please log in.</p>;
+     };
+     
+     export default ConditionalComponent;
      ```
      
       **[⬆ Back to Top](#table-of-contents)**
@@ -516,24 +516,24 @@ Hide/Show table of contents
      Arrow functions automatically bind `this` to the enclosing lexical scope, which eliminates the need to manually bind `this` in event handlers. This makes the code cleaner and more concise, especially when dealing with complex component hierarchies or passing functions as props.
 
      ```jsx harmony
-          import React, { useState } from 'react';
-          
-          const ArrowFunctionExample = () => {
-              const [count, setCount] = useState(0);
-          
-              const handleClick = () => {
-                  setCount(count + 1);
-              };
-          
-              return (
-                  <div>
-                      <p>Count: {count}</p>
-                      <button onClick={handleClick}>Increment</button>
-                  </div>
-              );
-          };
+     import React, { useState } from 'react';
+     
+     const ArrowFunctionExample = () => {
+         const [count, setCount] = useState(0);
+     
+         const handleClick = () => {
+             setCount(count + 1);
+         };
+     
+         return (
+             <div>
+                 <p>Count: {count}</p>
+                 <button onClick={handleClick}>Increment</button>
+             </div>
+         );
+     };
 
-          export default ArrowFunctionExample;
+     export default ArrowFunctionExample;
      ```
      
       **[⬆ Back to Top](#table-of-contents)**
@@ -545,26 +545,26 @@ Hide/Show table of contents
      The `useEffect` hook in React is used to perform side effects in functional components. It combines the functionality of `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` lifecycle methods in class components. It's called after every render and allows you to perform data fetching, subscriptions, or manually changing the DOM.
 
      ```jsx
-         import React, { useState, useEffect } from 'react';
-     
-         const EffectExample = () => {
-             const [count, setCount] = useState(0);
-     
-             useEffect(() => {
-                 document.title = `You clicked ${count} times`;
-             }, [count]);
-     
-             return (
-                 <div>
-                     <p>You clicked {count} times</p>
-                     <button onClick={() => setCount(count + 1)}>
-                         Click me
-                     </button>
-                 </div>
-             );
-         };
-     
-         export default EffectExample;
+    import React, { useState, useEffect } from 'react';
+
+    const EffectExample = () => {
+        const [count, setCount] = useState(0);
+
+        useEffect(() => {
+            document.title = `You clicked ${count} times`;
+        }, [count]);
+
+        return (
+            <div>
+                <p>You clicked {count} times</p>
+                <button onClick={() => setCount(count + 1)}>
+                    Click me
+                </button>
+            </div>
+        );
+    };
+
+    export default EffectExample;
      ```
           
       **[⬆ Back to Top](#table-of-contents)**
@@ -576,32 +576,32 @@ Hide/Show table of contents
      React portals provide a way to render children into a DOM node that exists outside the DOM hierarchy of the parent component. This is useful for scenarios like modals, tooltips, or dropdown menus where you want to render content at a different location in the DOM tree.
 
      ```jsx
-         import React, { useState } from 'react';
-         import ReactDOM from 'react-dom';
-     
-         const PortalExample = () => {
-             const [showModal, setShowModal] = useState(false);
-     
-             return (
-                 <div>
-                     <button onClick={() => setShowModal(true)}>Open Modal</button>
-                     {showModal &&
-                         ReactDOM.createPortal(
-                             <div className="modal">
-                                 <div className="modal-content">
-                                     <span className="close" onClick={() => setShowModal(false)}>
-                                         &times;
-                                     </span>
-                                     <p>This is a modal</p>
-                                 </div>
-                             </div>,
-                             document.getElementById('modal-root')
-                         )}
-                 </div>
-             );
-         };
-     
-         export default PortalExample;
+    import React, { useState } from 'react';
+    import ReactDOM from 'react-dom';
+
+    const PortalExample = () => {
+        const [showModal, setShowModal] = useState(false);
+
+        return (
+            <div>
+                <button onClick={() => setShowModal(true)}>Open Modal</button>
+                {showModal &&
+                    ReactDOM.createPortal(
+                        <div className="modal">
+                            <div className="modal-content">
+                                <span className="close" onClick={() => setShowModal(false)}>
+                                    &times;
+                                </span>
+                                <p>This is a modal</p>
+                            </div>
+                        </div>,
+                        document.getElementById('modal-root')
+                    )}
+            </div>
+        );
+    };
+
+    export default PortalExample;
      ```
           
       **[⬆ Back to Top](#table-of-contents)**
@@ -612,34 +612,34 @@ Hide/Show table of contents
 
      React Router is a library that allows you to handle routing in React applications. It provides components like `BrowserRouter`, `Route`, `Link`, etc., for declarative routing. React Router enables navigation between different components/pages of a single-page application.
 
-     ```jsx
-         import React from 'react';
-         import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-     
-         const Home = () => <h2>Home</h2>;
-         const About = () => <h2>About</h2>;
-     
-         const RoutingExample = () => (
-             <Router>
-                 <div>
-                     <nav>
-                         <ul>
-                             <li>
-                                 <Link to="/">Home</Link>
-                             </li>
-                             <li>
-                                 <Link to="/about">About</Link>
-                             </li>
-                         </ul>
-                     </nav>
-                     <Route path="/" exact component={Home} />
-                     <Route path="/about" component={About} />
-                 </div>
-             </Router>
-         );
-     
-         export default RoutingExample;
-     ```
+    ```jsx
+    import React from 'react';
+    import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
+    const Home = () => <h2>Home</h2>;
+    const About = () => <h2>About</h2>;
+
+    const RoutingExample = () => (
+        <Router>
+            <div>
+                <nav>
+                    <ul>
+                        <li>
+                            <Link to="/">Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/about">About</Link>
+                        </li>
+                    </ul>
+                </nav>
+                <Route path="/" exact component={Home} />
+                <Route path="/about" component={About} />
+            </div>
+        </Router>
+    );
+
+    export default RoutingExample;
+    ```
           
       **[⬆ Back to Top](#table-of-contents)**
     <br><br>
