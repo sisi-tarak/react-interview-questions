@@ -994,6 +994,135 @@ Hide/Show table of contents
     <br><br>
 
 
+44. ### Describe how to implement programmatic navigation with React Router?
+
+     React Router provides programmatic navigation using the `useNavigate` hook (or `history` object in older versions). This allows you to navigate to different routes from within components using JavaScript code.
+
+     ```jsx
+     import { useNavigate } from 'react-router-dom';
+     
+     function Login() {
+       const navigate = useNavigate();
+     
+       const handleLogin = () => {
+         // Perform login logic
+         navigate('/dashboard'); // Programmatic navigation to dashboard
+       };
+     
+       return (
+         <div>
+           <form onSubmit={handleLogin}>
+             {/* Login form */}
+           </form>
+         </div>
+       );
+     }
+     ```
+                      
+      **[⬆ Back to Top](#table-of-contents)**
+    <br><br>
+
+
+45. ### How do you prevent default behavior in React Router links?
+
+     By default, anchor (`<a>`) tags within `Link` components from React Router will trigger a full page reload. To prevent this and leverage client-side routing, set the `to` prop instead of the `href` prop.
+
+     ```jsx
+     import { Link } from 'react-router-dom';
+     
+     function Navigation() {
+       return (
+         <nav>
+           <Link to="/">Home</Link>
+           <Link to="/about">About</Link>
+           <Link to="/products">Products</Link>
+         </nav>
+       );
+     }
+     ```
+                      
+      **[⬆ Back to Top](#table-of-contents)**
+    <br><br>
+
+
+46. ### Explain how to handle protected routes in React Router?
+
+     Implement protected routes to restrict access to certain portions of your application based on authentication status. You can achieve this using techniques like: <br><br>
+         - Conditional rendering: Check if a user is logged in before rendering the protected route component. <br>
+         - Higher-order components (HOCs): Wrap protected routes with an HOC that verifies authentication and redirects if needed. <br>
+         - Third-party libraries: Consider libraries like `react-router-dom/privateRoutes` for simplified protected route handling. <br>
+                          
+      **[⬆ Back to Top](#table-of-contents)**
+    <br><br>
+
+
+47. ### Discuss lazy loading components in React Router?
+
+     Lazy loading improves initial load times by delaying the loading of components until they're actually needed. React Router provides the `Suspense` component and a dynamic import syntax (`import('./MyComponent')`) to achieve lazy loading.
+
+     ```jsx
+     const About = React.lazy(() => import('./About'));
+     
+     function App() {
+       return (
+         <Routes>
+           <Route path="/" element={<Home />} />
+           <Route
+             path="/about"
+             element={
+               <Suspense fallback={<div>Loading...</div>}>
+                 <About />
+               </Suspense>
+             }
+           />
+         </Routes>
+       );
+     }
+     ```
+                      
+      **[⬆ Back to Top](#table-of-contents)**
+    <br><br>
+
+
+48. ### How do you handle query parameters in React Router?
+
+     Query parameters (key-value pairs after the `?` in a URL) can be accessed using the `useLocation` hook from React Router. Destructure the `search` property to parse the query string.
+
+     ```jsx
+     import { useLocation } from 'react-router-dom';
+     
+     function SearchResults() {
+       const location = useLocation();
+       const queryParams = new URLSearchParams(location.search);
+       const searchTerm = queryParams.get('q');
+     
+       return (
+         <div>
+           <h1>Search results for "{searchTerm}"</h1>
+           {/* Display search results based on the term */}
+         </div>
+       );
+     }
+     ```
+                      
+      **[⬆ Back to Top](#table-of-contents)**
+    <br><br>
+
+
+49. ### How can you optimize performance in React Router applications?
+
+     Several strategies can enhance performance: <br> <br>
+         - Lazy loading (already discussed). <br>
+         - Memoization: Use `React.memo` or similar techniques to prevent unnecessary re-renders of route components. <br>
+         - Code splitting: Break down your application code into smaller bundles to reduce initial load times. <br>
+                          
+      **[⬆ Back to Top](#table-of-contents)**
+    <br><br>
+
+
+
+
+
 
 
 
