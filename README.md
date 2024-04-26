@@ -55,6 +55,16 @@ Hide/Show table of contents
 | 36  | [What is the purpose of the children prop in React?](#what-is-the-purpose-of-the-children-prop-in-react)                                                                                                                         |
 | 37  | [Explain the concept of useRef() hook in React?](#explain-the-concept-of-useref-hook-in-react)                                                                                                                                   |
 | 38  | [What are the benefits of using React's strict mode?](#what-are-the-benefits-of-using-reacts-strict-mode)                                                                                                                        |
+| 39  | [What is React Router and its benefits?](#what-is-react-router-and-its-benefits)                                                                                                                                                 |
+| 40  | [Explain the difference between BrowserRouter and HashRouter in React Router?](#explain-the-difference-between-browserrouter-and-hashrouter-in-react-router)                                                                     |
+| 41  | [How do you define routes in React Router?](#how-do-you-define-routes-in-react-router)                                                                                                                                           |
+| 42  | [How do you pass parameters to components using React Router?](#how-do-you-pass-parameters-to-components-using-react-router)                                                                                                     |
+| 43  | [Explain nested routing in React Router?](#explain-nested-routing-in-react-router)                                                                                                                                               |
+| 44  | [](#what-are-)                                                                                                                                                                               |
+| 45  | [](#what-are-)                                                                                                                                                                               |
+| 46  | [](#what-are-)                                                                                                                                                                               |
+| 47  | [](#what-are-)                                                                                                                                                                               |
+| 48  | [](#what-are-)                                                                                                                                                                               |
                                  
 </details>
 
