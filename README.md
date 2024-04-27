@@ -60,11 +60,12 @@ Hide/Show table of contents
 | 41  | [How do you define routes in React Router?](#how-do-you-define-routes-in-react-router)                                                                                                                                           |
 | 42  | [How do you pass parameters to components using React Router?](#how-do-you-pass-parameters-to-components-using-react-router)                                                                                                     |
 | 43  | [Explain nested routing in React Router?](#explain-nested-routing-in-react-router)                                                                                                                                               |
-| 44  | [](#what-are-)                                                                                                                                                                               |
-| 45  | [](#what-are-)                                                                                                                                                                               |
-| 46  | [](#what-are-)                                                                                                                                                                               |
-| 47  | [](#what-are-)                                                                                                                                                                               |
-| 48  | [](#what-are-)                                                                                                                                                                               |
+| 44  | [Describe how to implement programmatic navigation with React Router?](#describe-how-to-implement-programmatic-navigation-with-react-router)                                                                                     |
+| 45  | [How do you prevent default behaviour in React Router links?](#how-do-you-prevent-default-bahaviour-in-react-router-links)                                                                                                       |
+| 46  | [Explain how to handle protected routes in React Router?](#explain-how-to-handle-protected-routes-in-react-router)                                                                                                               |
+| 47  | [Discuss lazy loading components in React Router?](#discuss-lazy-loading-components-in-react-router)                                                                                                                             |
+| 48  | [How do you handle query parameters in React Router?](#how-do-you-handle-query-parameters-in-react-router)                                                                                                                       |
+| 49  | [How can you optimize performance in React Router applications?](#how-can-you-optimize-performance-in-react-router-applications)                                                                                                 |
                                  
 </details>
 
@@ -1023,7 +1024,7 @@ Hide/Show table of contents
     <br><br>
 
 
-45. ### How do you prevent default behavior in React Router links?
+45. ### How do you prevent default behaviour in React Router links?
 
      By default, anchor (`<a>`) tags within `Link` components from React Router will trigger a full page reload. To prevent this and leverage client-side routing, set the `to` prop instead of the `href` prop.
 
