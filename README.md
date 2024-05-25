@@ -1227,7 +1227,7 @@ Hide/Show table of contents
     - **Redux Thunk:** Allows dispatching functions that can contain asynchronous logic (e.g., using `fetch`).
     - **Redux Saga:** More complex middleware for managing complex asynchronous workflows with generators and cancellation features.
                       
-      **[⬆ Back to Top](#table-of-contents)**
+**[⬆ Back to Top](#table-of-contents)**
     <br><br>
     
 
@@ -1235,7 +1235,7 @@ Hide/Show table of contents
 
      - Store user authentication state (e.g., `isLoggedIn`, user data) in the Redux store. Dispatch actions to update the state based on login, logout, or fetching user information. Consider using libraries like `redux-persist` to persist authentication state across browser refreshes.
                    
-     **[⬆ Back to Top](#table-of-contents)**
+**[⬆ Back to Top](#table-of-contents)**
     <br><br>
 
 
