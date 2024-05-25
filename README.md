@@ -1042,7 +1042,7 @@ Hide/Show table of contents
      }
      ```
                       
-      **[⬆ Back to Top](#table-of-contents)**
+**[⬆ Back to Top](#table-of-contents)**
     <br><br>
 
 
@@ -1053,7 +1053,7 @@ Hide/Show table of contents
      - Higher-order components (HOCs): Wrap protected routes with an HOC that verifies authentication and redirects if needed. <br>
      - Third-party libraries: Consider libraries like `react-router-dom/privateRoutes` for simplified protected route handling. <br>
                           
-     **[⬆ Back to Top](#table-of-contents)**
+**[⬆ Back to Top](#table-of-contents)**
     <br><br>
 
 
@@ -1081,7 +1081,7 @@ Hide/Show table of contents
      }
      ```
                       
-      **[⬆ Back to Top](#table-of-contents)**
+**[⬆ Back to Top](#table-of-contents)**
     <br><br>
 
 
@@ -1106,7 +1106,7 @@ Hide/Show table of contents
      }
      ```
                       
-      **[⬆ Back to Top](#table-of-contents)**
+**[⬆ Back to Top](#table-of-contents)**
     <br><br>
 
 
@@ -1117,7 +1117,7 @@ Hide/Show table of contents
      - Memoization: Use `React.memo` or similar techniques to prevent unnecessary re-renders of route components. 
      - Code splitting: Break down your application code into smaller bundles to reduce initial load times. 
                           
-     **[⬆ Back to Top](#table-of-contents)**
+**[⬆ Back to Top](#table-of-contents)**
     <br><br>
 
 
@@ -1165,7 +1165,7 @@ Hide/Show table of contents
      export default connect(mapStateToProps, mapDispatchToProps)(Counter);
      ```
                       
-      **[⬆ Back to Top](#table-of-contents)**
+**[⬆ Back to Top](#table-of-contents)**
     <br><br>
     
 
@@ -1176,7 +1176,7 @@ Hide/Show table of contents
      - Reducers, based on the action type, update a slice of the application state and return the new state.
      - The store holds the updated state, and connected components re-render based on the changed state they're subscribed to.
                    
-      **[⬆ Back to Top](#table-of-contents)**
+**[⬆ Back to Top](#table-of-contents)**
     <br><br>
 
 
@@ -1186,7 +1186,7 @@ Hide/Show table of contents
      - `mapStateToProps`: A function that maps a slice of the Redux store state to component props.
      - `mapDispatchToProps`: A function that maps dispatch functions (to trigger actions) to component props.
                      
-     **[⬆ Back to Top](#table-of-contents)**
+**[⬆ Back to Top](#table-of-contents)**
     <br><br>
     
 
@@ -1195,7 +1195,7 @@ Hide/Show table of contents
     - `mapStateToProps`: Connects a portion of the Redux store state to a component's props.
     - `mapDispatchToProps`: Provides dispatch functions as props, enabling components to trigger actions.
                       
-    **[⬆ Back to Top](#table-of-contents)**
+**[⬆ Back to Top](#table-of-contents)**
     <br><br>
     
 
@@ -1207,7 +1207,7 @@ Hide/Show table of contents
     - Testability: Pure reducers and isolated components enhance unit testing.
     - Scalability: Redux patterns can scale well for complex applications.
                        
-      **[⬆ Back to Top](#table-of-contents)**
+**[⬆ Back to Top](#table-of-contents)**
     <br><br>
     
 
@@ -1217,7 +1217,7 @@ Hide/Show table of contents
     - Increased boilerplate: Setting up Redux store, reducers, actions, and connecting components can add complexity.
     - Performance overhead: Maintaining a central store might introduce a slight overhead, especially for simpler apps.
                       
-      **[⬆ Back to Top](#table-of-contents)**
+**[⬆ Back to Top](#table-of-contents)**
     <br><br>
     
 
