@@ -1,4 +1,4 @@
-# 300+ ReactJS Interview Q&A
+# 50+ ReactJS Interview Q&A
 
 > Click ⭐ if you like the project. Follow me [@sisi_tarak](https://www.linkedin.com/in/sisitarak) for more.
 
