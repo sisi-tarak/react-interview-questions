@@ -346,7 +346,7 @@ function Button({ label, onClick }) {
 | `this` keyword | Not needed | Required |
 | Performance | Lighter | Slightly heavier |
 | Readability | Simpler | More boilerplate |
-| Modern usage | ✅ Recommended | ❌ Legacy |
+| Modern usage |   Recommended |   Legacy |
 
 ```jsx
 // Functional Component (modern)
@@ -415,7 +415,7 @@ function Toggle() {
 
   return (
     <button onClick={() => setIsOn(!isOn)}>
-      {isOn ? '✅ ON' : '❌ OFF'}
+      {isOn ? '  ON' : '  OFF'}
     </button>
   );
 }
@@ -432,10 +432,10 @@ function Toggle() {
 | Feature | Props | State |
 | ------- | ----- | ----- |
 | Who manages it? | Parent component | Component itself |
-| Mutable? | ❌ No (read-only) | ✅ Yes |
+| Mutable? |   No (read-only) |   Yes |
 | Triggers re-render? | When parent re-renders | When updated via setter |
 | Used for | Passing data down | Managing internal data |
-| Accessible to child? | ✅ Yes (passed down) | ❌ No (unless lifted up) |
+| Accessible to child? |   Yes (passed down) |   No (unless lifted up) |
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -458,7 +458,7 @@ function UserList() {
   return (
     <ul>
       {users.map(user => (
-        <li key={user.id}>{user.name}</li>  // ✅ Use unique ID as key
+        <li key={user.id}>{user.name}</li>  //   Use unique ID as key
       ))}
     </ul>
   );
@@ -529,7 +529,7 @@ function SkillList() {
 React Fragments let you group multiple child elements **without adding an extra DOM node** like a `<div>`. Useful when returning multiple elements from a component.
 
 ```jsx
-// ❌ Adds unnecessary <div> to DOM
+//   Adds unnecessary <div> to DOM
 function Info() {
   return (
     <div>
@@ -539,7 +539,7 @@ function Info() {
   );
 }
 
-// ✅ No extra node — uses Fragment shorthand <>
+//   No extra node — uses Fragment shorthand <>
 function Info() {
   return (
     <>
@@ -646,7 +646,7 @@ class Counter extends Component {
   state = { count: 0 };
 
   increment = () => {
-    // ✅ Use callback form when new state depends on previous state
+    //   Use callback form when new state depends on previous state
     this.setState(prevState => ({ count: prevState.count + 1 }));
   };
 
@@ -917,8 +917,8 @@ React Hooks are **special built-in functions** introduced in **React 16.8** that
 - `this` binding in classes was confusing
 
 **Rules of Hooks:**
-1. ✅ Only call hooks at the **top level** — not inside loops, conditions, or nested functions
-2. ✅ Only call hooks from **React functional components** or custom hooks
+1.   Only call hooks at the **top level** — not inside loops, conditions, or nested functions
+2.   Only call hooks from **React functional components** or custom hooks
 
 **Built-in hooks:**
 
@@ -956,10 +956,10 @@ import { useState } from 'react';
 function Counter() {
   const [count, setCount] = useState(0);
 
-  // ❌ May produce stale state when batched
+  //   May produce stale state when batched
   const badIncrement = () => setCount(count + 1);
 
-  // ✅ Safe — always uses latest state
+  //   Safe — always uses latest state
   const increment = () => setCount(prev => prev + 1);
 
   // Updating an object state — must spread previous state
@@ -1954,12 +1954,12 @@ Commit changes to Real DOM
 Lifting state up means moving **shared state to the closest common ancestor** of the components that need it, so they can both read from and update the same state via props/callbacks.
 
 ```jsx
-// ❌ Before — duplicate/uncoordinated state
+//   Before — duplicate/uncoordinated state
 function TemperatureInput() {
   const [temp, setTemp] = useState(0); // each has its own state
 }
 
-// ✅ After — state lifted to parent
+//   After — state lifted to parent
 function Calculator() {
   const [celsius, setCelsius] = useState(0); // shared state in parent
 
@@ -2037,8 +2037,8 @@ React Router is the standard **client-side routing library** for React. It enabl
 | ------- | ------------- | ---------- |
 | URL format | `example.com/about` | `example.com/#/about` |
 | Uses | HTML5 History API | URL hash (`#`) |
-| SEO | ✅ Better | ❌ Poor |
-| Server config needed? | ✅ Yes (catch-all route) | ❌ No |
+| SEO |   Better |   Poor |
+| Server config needed? |   Yes (catch-all route) |   No |
 | Use case | Modern apps with server support | GitHub Pages, static hosting |
 
 ```jsx
@@ -2453,8 +2453,8 @@ function CartButton() {
 | ------- | ------- | ------------- |
 | Bundle size | ~1KB | ~15KB |
 | Boilerplate | Minimal | Moderate |
-| Provider needed | ❌ No | ✅ Yes |
-| DevTools | ✅ | ✅ Excellent |
+| Provider needed |   No |   Yes |
+| DevTools |   |   Excellent |
 | Learning curve | Very easy | Moderate |
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -2542,8 +2542,8 @@ React Fiber is the **complete rewrite of React's core reconciliation algorithm**
 
 | Phase | What happens | Can be interrupted? | Side effects allowed? |
 | ----- | ------------ | ------------------- | --------------------- |
-| **Render Phase** | React calls component functions, computes new virtual DOM tree | ✅ Yes (Concurrent Mode) | ❌ No |
-| **Commit Phase** | React applies DOM changes, runs `useLayoutEffect`, then `useEffect` | ❌ No (synchronous) | ✅ Yes |
+| **Render Phase** | React calls component functions, computes new virtual DOM tree |   Yes (Concurrent Mode) |   No |
+| **Commit Phase** | React applies DOM changes, runs `useLayoutEffect`, then `useEffect` |   No (synchronous) |   Yes |
 
 > **Why this matters:** The render phase can run multiple times for the same update (in Concurrent Mode). This is why side effects in the render phase (like direct API calls) are bugs — they'd run multiple times.
 
@@ -2576,7 +2576,7 @@ React Fiber is the **complete rewrite of React's core reconciliation algorithm**
 State colocation means placing state **as close as possible to the component that uses it**. Moving state down prevents unnecessary re-renders of unrelated components.
 
 ```jsx
-// ❌ State too high — entire App re-renders when modal toggles
+//   State too high — entire App re-renders when modal toggles
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false); // used only by Modal
   return (
@@ -2588,7 +2588,7 @@ function App() {
   );
 }
 
-// ✅ State colocated inside Modal — only Modal re-renders
+//   State colocated inside Modal — only Modal re-renders
 function App() {
   return (
     <>
@@ -2719,7 +2719,7 @@ Accordion.Item = function Item({ id, title, children }) {
 | ------- | -------------------------- | --------------------------- |
 | Initial HTML | Empty `<div id="root">` | Full HTML from server |
 | First Contentful Paint | Slow (JS must download first) | Fast |
-| SEO | Poor (crawlers may miss JS content) | ✅ Excellent |
+| SEO | Poor (crawlers may miss JS content) |   Excellent |
 | Server load | Low | Higher |
 | Interactivity | After JS bundle loads | After hydration |
 | Framework | Vite, CRA | Next.js, Remix |
@@ -2761,10 +2761,10 @@ React Server Components are components that run **exclusively on the server** �
 | Feature | Server Component | Client Component |
 | ------- | --------------- | ---------------- |
 | Runs on | Server only | Browser |
-| JS sent to browser | ❌ Zero | ✅ Yes |
-| useState / useEffect | ❌ Not allowed | ✅ Yes |
-| Direct DB/file access | ✅ Yes | ❌ No |
-| Interactivity | ❌ No | ✅ Yes |
+| JS sent to browser |   Zero |   Yes |
+| useState / useEffect |   Not allowed |   Yes |
+| Direct DB/file access |   Yes |   No |
+| Interactivity |   No |   Yes |
 | Mark with | (default in App Router) | `'use client'` directive |
 
 ```jsx
@@ -2822,7 +2822,7 @@ setTimeout(() => {
 setTimeout(() => {
   setCount(c => c + 1);
   setFlag(f => !f);
-  // Total: 1 re-render ✅
+  // Total: 1 re-render  
 }, 1000);
 
 // React 18 also batches in Promises, fetch callbacks, native events
@@ -2888,8 +2888,8 @@ describe('Counter component', () => {
 | ------- | --------------------- | ------ |
 | Philosophy | Test behaviour like a user | Test implementation details |
 | DOM access | Queries by role, text, label | Direct component instance access |
-| Maintained | ✅ Actively maintained | ❌ Poorly maintained (React 18 issues) |
-| Recommended by React team | ✅ Yes | ❌ No |
+| Maintained |   Actively maintained |   Poorly maintained (React 18 issues) |
+| Recommended by React team |   Yes |   No |
 | Queries | `getByRole`, `getByText`, `getByLabelText` | `.find()`, `.state()`, `.props()` |
 
 > **RTL principle:** "The more your tests resemble the way your software is used, the more confidence they can give you."
@@ -2954,13 +2954,13 @@ React **automatically escapes** string values in JSX — making it safe by defau
 ```jsx
 const userInput = '<script>alert("hacked!")</script>';
 
-// ✅ React escapes this — renders as text, not HTML
+//   React escapes this — renders as text, not HTML
 <p>{userInput}</p>
 
-// ❌ dangerouslySetInnerHTML bypasses React's protection
+//   dangerouslySetInnerHTML bypasses React's protection
 <p dangerouslySetInnerHTML={{ __html: userInput }} /> // DANGEROUS
 
-// ✅ Sanitize before using dangerouslySetInnerHTML
+//   Sanitize before using dangerouslySetInnerHTML
 import DOMPurify from 'dompurify';
 <p dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(userInput) }} />
 ```
@@ -3113,13 +3113,13 @@ Use `useReducer` when:
 - You want to **extract state logic outside the component** for testing
 
 ```jsx
-// ❌ useState — messy with multiple related state vars
+//   useState — messy with multiple related state vars
 const [loading, setLoading] = useState(false);
 const [data, setData] = useState(null);
 const [error, setError] = useState(null);
 const [retryCount, setRetryCount] = useState(0);
 
-// ✅ useReducer — all related state in one place
+//   useReducer — all related state in one place
 const [state, dispatch] = useReducer(fetchReducer, {
   loading: false, data: null, error: null, retryCount: 0
 });
@@ -3138,13 +3138,13 @@ const [state, dispatch] = useReducer(fetchReducer, {
 
 | Scenario | Use Context API | Use Redux/Zustand |
 | -------- | --------------- | ----------------- |
-| Theme (dark/light) | ✅ | ❌ Overkill |
-| Auth user info | ✅ | ✅ Both work |
-| Language/locale | ✅ | ❌ Overkill |
-| Shopping cart | ❌ | ✅ |
-| Complex UI state with many updates | ❌ | ✅ |
-| App needing DevTools + time travel | ❌ | ✅ |
-| Shared state across many features | ❌ | ✅ |
+| Theme (dark/light) |   |   Overkill |
+| Auth user info |   |   Both work |
+| Language/locale |   |   Overkill |
+| Shopping cart |   |   |
+| Complex UI state with many updates |   |   |
+| App needing DevTools + time travel |   |   |
+| Shared state across many features |   |   |
 
 > **Context re-renders ALL consumers** when value changes. Redux only re-renders components that subscribe to the changed slice. For frequently changing data, prefer Redux/Zustand.
 
@@ -3304,22 +3304,22 @@ axiosInstance.interceptors.response.use(
 It causes a **second render cycle** — the effect runs after the first render, updates state, which triggers another render.
 
 ```jsx
-// ❌ Infinite loop — no dependency array
+//   Infinite loop — no dependency array
 useEffect(() => {
   setCount(count + 1); // runs after every render → triggers render → repeat
 });
 
-// ✅ Runs once — empty dependency array
+//   Runs once — empty dependency array
 useEffect(() => {
   setCount(0); // only runs on mount
 }, []);
 
-// ✅ Runs when source data changes
+//   Runs when source data changes
 useEffect(() => {
   setDisplayData(processData(rawData)); // derived from rawData
 }, [rawData]);
 
-// ✅ Best practice: compute derived values inline (no setState in effect)
+//   Best practice: compute derived values inline (no setState in effect)
 const displayData = useMemo(() => processData(rawData), [rawData]);
 ```
 
@@ -3336,21 +3336,21 @@ Direct state mutation **bypasses React's reactivity system** — the component w
 ```jsx
 const [user, setUser] = useState({ name: 'Sisi', age: 20 });
 
-// ❌ Direct mutation — React won't detect this change, no re-render
+//   Direct mutation — React won't detect this change, no re-render
 user.age = 21;
 setUser(user); // same object reference — React sees no change!
 
-// ✅ Correct — create a new object reference
+//   Correct — create a new object reference
 setUser({ ...user, age: 21 });
 
 // For arrays:
 const [items, setItems] = useState([1, 2, 3]);
 
-// ❌ Wrong — mutates array
+//   Wrong — mutates array
 items.push(4);
 setItems(items); // same reference
 
-// ✅ Correct — new array
+//   Correct — new array
 setItems([...items, 4]);
 setItems(prev => prev.filter(i => i !== 2)); // remove item
 ```
@@ -3366,7 +3366,7 @@ setItems(prev => prev.filter(i => i !== 2)); // remove item
 Derived state is a value **computed from existing state or props**. Storing it separately in state causes bugs (sync issues) and unnecessary re-renders.
 
 ```jsx
-// ❌ Redundant state — derived from items
+//   Redundant state — derived from items
 function Cart({ items }) {
   const [total, setTotal] = useState(0);
 
@@ -3377,7 +3377,7 @@ function Cart({ items }) {
   return <p>Total: ₹{total}</p>;
 }
 
-// ✅ Compute inline — always in sync, zero extra renders
+//   Compute inline — always in sync, zero extra renders
 function Cart({ items }) {
   const total = items.reduce((sum, item) => sum + item.price, 0); // derived
 
@@ -3398,7 +3398,7 @@ function Cart({ items }) {
 
 ```jsx
 // 1. Semantic HTML — the foundation
-<button onClick={handleClick}>Submit</button> // ✅ not <div onClick={...}>
+<button onClick={handleClick}>Submit</button> //   not <div onClick={...}>
 
 // 2. ARIA attributes
 <input
@@ -3454,18 +3454,18 @@ function Field({ label }) {
 Tree shaking is a **dead code elimination technique** performed by bundlers (Webpack, Vite, Rollup) that removes unused exports from your final bundle — reducing its size.
 
 ```jsx
-// ❌ Imports entire lodash — bundles ALL of lodash (~70KB gzipped)
+//   Imports entire lodash — bundles ALL of lodash (~70KB gzipped)
 import _ from 'lodash';
 _.debounce(fn, 300);
 
-// ✅ Named import — bundler tree-shakes to include only debounce (~2KB)
+//   Named import — bundler tree-shakes to include only debounce (~2KB)
 import { debounce } from 'lodash-es'; // use lodash-es for ESM tree-shaking
 
 // React is also tree-shakeable with ESM imports
-// ❌ Legacy CommonJS — not tree-shakeable
+//   Legacy CommonJS — not tree-shakeable
 const React = require('react');
 
-// ✅ ESM — tree-shakeable (React 17+ JSX transform doesn't even need React import)
+//   ESM — tree-shakeable (React 17+ JSX transform doesn't even need React import)
 import { useState, useEffect } from 'react';
 
 // Checking bundle size with:
@@ -3512,7 +3512,7 @@ Found a mistake, have a better explanation, or want to add more questions?
 
 | Status | Repository |
 | ------ | ---------- |
-| ✅ Live | [react-interview-questions](https://github.com/sisi-tarak/react-interview-questions) |
+|   Live | [react-interview-questions](https://github.com/sisi-tarak/react-interview-questions) |
 | 🔜 Coming | nodejs-interview-questions |
 | 🔜 Coming | mern-interview-questions |
 | 🔜 Coming | dsa-interview-questions |
