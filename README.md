@@ -2,8 +2,6 @@
 
 > Click ⭐ if you like the project. Follow me [@sisi_tarakk](https://www.instagram.com/sisi_tarakk) on Instagram and [@sisitarak](https://www.linkedin.com/in/sisitarak) on LinkedIn for more.
 
----
-
 > Pull Requests are highly recommended and appreciated. 🙌
 
 ---
@@ -3483,8 +3481,6 @@ import { useState, useEffect } from 'react';
 <div align="center">
 
 ## 🎉 You've covered all 100 ReactJS Interview Questions!
-
----
 
 **If this repo helped you prepare, please give it a ⭐**
 
