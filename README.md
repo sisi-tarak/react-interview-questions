@@ -3475,8 +3475,7 @@ import { useState, useEffect } from 'react';
 **[⬆ Back to Top](#table-of-contents)**
 
 <br>
-
----
+<br>
 
 <div align="center">
 
@@ -3486,7 +3485,7 @@ import { useState, useEffect } from 'react';
 
 [![Star this repo](https://img.shields.io/github/stars/sisi-tarak/react-interview-questions?style=social)](https://github.com/sisi-tarak/react-interview-questions)
 
----
+<br>
 
 ### 📲 Follow Sisi for more tech interview prep content
 
@@ -3502,7 +3501,6 @@ Found a mistake, have a better explanation, or want to add more questions?
 
 **[Open a Pull Request](https://github.com/sisi-tarak/react-interview-questions/pulls)** — all contributions are welcome! 🙌
 
----
 
 ### 📦 More Interview Repos Coming Soon
 
