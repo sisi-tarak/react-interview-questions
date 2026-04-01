@@ -3507,7 +3507,7 @@ Found a mistake, have a better explanation, or want to add more questions?
 | Status | Repository |
 | ------ | ---------- |
 |   Live | [react-interview-questions](https://github.com/sisi-tarak/react-interview-questions) |
-| 🔜 Coming | nodejs-interview-questions |
+|   Live | [nodejs-interview-questions](https://github.com/sisi-tarak/nodejs-interview-questions) |
 | 🔜 Coming | mern-interview-questions |
 | 🔜 Coming | dsa-interview-questions |
 | 🔜 Coming | java-interview-questions |
